@@ -10,4 +10,4 @@ permalink: /about/
 ### Started since *2018*
 
 ### Contact me  
-[team.madhat@gmail.com.com](mailto:team.madhat@gmail.com.com)
+[team.madhat@gmail.com](mailto:team.madhat@gmail.com)
