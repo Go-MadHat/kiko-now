@@ -6,11 +6,11 @@ permalink: /about/
 
 # ABOUT US
 
-![](./logo.png =150x150)
+<img src="./logo.png" width="200%">
 
 ## We are MadHat
 
-### Started since 2018
+### Started since *2018*
 
 ### Contact me  
 [team.madhat@gmail.com.com](mailto:team.madhat@gmail.com.com)
