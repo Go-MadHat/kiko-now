@@ -4,8 +4,6 @@ title:
 permalink: /about/
 ---
 
-<center>
-
 # ABOUT US
 
 ![](./logo.png){: width="100px" height="20px"}
@@ -16,4 +14,3 @@ permalink: /about/
 
 ### Contact me  
 [team.madhat@gmail.com.com](mailto:team.madhat@gmail.com.com)
-</center>
