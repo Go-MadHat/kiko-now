@@ -6,7 +6,7 @@ permalink: /about/
 
 # ABOUT US
 
-<img src="./logo.png" width="120%">
+<img src="./logo.png">
 
 ## We are MadHat
 
