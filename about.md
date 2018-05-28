@@ -3,7 +3,7 @@ layout: page
 title: ABOUT US
 permalink: /about/
 ---
-<img src="../logo_main.png" width="50%">
+<img src="../logo_main.png" width="20%">
 
 ## We are MadHat
 
