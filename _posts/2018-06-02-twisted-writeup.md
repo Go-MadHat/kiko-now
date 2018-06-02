@@ -42,8 +42,8 @@ nc 34.218.199.37 6000
 
 여기서 사용되고 있고, 사용하고 있는 함수를 찾아보면 `sub_8048867()`에서 찾을 수 있고, 여기서 더 올라가보면 이 함수가 312번 호출되는 것을 알 수 있다.
 
-![]({{ site.baseurl }}/images/myria/twisted-writeup/twisted_04.PNG)  
-![]({{ site.baseurl }}/images/myria/twisted-writeup/twisted_05.PNG)  
+![]({{ site.baseurl }}/images/myria/twisted-writeup/twisted_04.PNG)
+![]({{ site.baseurl }}/images/myria/twisted-writeup/twisted_05.PNG)
 
 그렇다면 저 함수를 312번 호출이 끝나면 무엇이 수행되는지 보자.
 아래 그림을 통해 이 프로그램이 대략적으로 어떻게 돌아가는지 표현해보았다.
@@ -188,8 +188,11 @@ conn.interactive()
 ### *후기
 
 재미있는 문제였다. 일단 seed값을 똑같이 설정해서 같은 랜덤값을 얻는 문제를 실제로 풀어본 것이 처음이였다.
+
 뭐... 그 만큼 삽질을 많이해서 굉장히 시간을 많이 잡아먹었지만 ㅡㅡ;
+
 일단 `while(getchar() == 10) ;` 부분이 당연히 버퍼를 비워주기 위한 코드인줄 알아서 익스할때 익스가 제대로 되지않아서 많은 시간을 잡아먹었고,
+
 최근에 execve() 함수 안에 "/bin/sh"를 호출해주는 부분으로 바로 뛰어 쉘을 한방에 띄울 수 있다는 `oneshot gadget`이란 것을 알게 되어 이 원샷가젯을 사용하려다가 굉장히 많은 시간을 잡아먹었다.
 일단 원샷가젯에 대한 결론을 말하자면... 32bit 바이너리라서 원샷가젯이 안먹힌다;; 64bit에서는 정상적으로 사용가능하므로 64bit 익스에만 사용하도록 하자.
 
