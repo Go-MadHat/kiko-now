@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Byte Bandits CTF Tale of a Twisted Mind Writeup
+comments: true
 excerpt_separator: <!--more-->
 tags:
   - Write-up
