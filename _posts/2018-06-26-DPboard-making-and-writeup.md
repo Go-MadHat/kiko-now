@@ -23,15 +23,16 @@ tags:
 어디에 플래그가 뜰지 예상이 가시나요?
 
 DPboard 문제의 메인 페이지는 다음과 같습니다.
-![]({{ site.baseurl }}go-madhat.github.io/images/mitny/2018-06-26-DPboard-making-and-writeup/dp1.PNG)
+
+![]({{ site.baseurl }}/images/mitny/DPboard/dp1.PNG)
 
 메시지를 추가하고, 전광판에 표시를 하는 기능이 있고 지금까지 등록된 메시지들이 테이블 형식으로 보입니다.
 
 메시지를 추가하게 되면 다음과 같이 테이블에 메시지가 추가됩니다.
-![]({{ site.baseurl }}go-madhat.github.io/images/mitny/2018-06-26-DPboard-making-and-writeup/dp2.PNG)
+![]({{ site.baseurl }}/images/mitny/DPboard/dp2.PNG)
 
 `hey` 라는 메시지를 전광판에 띄워 볼게요.
-![]({{ site.baseurl }}go-madhat.github.io/images/mitny/2018-06-26-DPboard-making-and-writeup/dp3.PNG)
+![]({{ site.baseurl }}/images/mitny/DPboard/dp3.PNG)
 
 
 
