@@ -1,4 +1,16 @@
-# 0ctf 2017 babyheap문제를 풀어보자!  
+---
+layout: post
+title: ! "[0ctf2017] babyheap Write up"
+excerpt_separator: <!--more-->
+comments : true
+tags:
+  - Write-up
+  - CTF
+  - 0ctf2017
+  - chaem
+  - heap
+---
+ 
 안녕하세요 chaem이에요!!!!ㅎㅎ  
 제가 이번에 풀어본 문제는 0ctf에서 2017년에 출제된 pwnable문제입니다. 바로 babyheap이라는 heap 문제인데요!!  
 요 문제는 shellpish형님들의 how2heap 중에서 fastbin_dup_into_stack 공격 예시이기도 합니다용ㅎㅎ heap을 공부하다가 첫 언덕을 넘기위해 이 문제에 도전하였숩니당ㅠㅠ  
