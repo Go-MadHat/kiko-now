@@ -12,6 +12,8 @@ webhacking.kr에 있는 25번과 52번 문제를 풀어보았다.
 
 25번 문제는 아래와 같다.  
 
+<!--more-->
+
 ![]({{ site.baseurl }}/images/rlawogns/webhacking.kr_25_52writeup/25.PNG)
 
 처음화면은 hello world이 출력이 되고 ?file=hello이 적혀있는 것을 볼 수가 있다.
