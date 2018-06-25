@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RCTF2018 rblog Write up
+title: ! "[RCTF2018] rblog Write up"
 excerpt_separator: <!--more-->
 comments : true
 tags:
