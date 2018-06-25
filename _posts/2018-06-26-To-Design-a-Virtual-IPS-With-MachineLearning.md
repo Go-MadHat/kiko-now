@@ -39,5 +39,6 @@ IPS는 Instrusion Prevent System, 길게 말할 필요 없이 탐지 시스템�
 
 OS간 서로 방해하지 못하도록 VM에 대한 자원 및 메모리 할당, 처리 등을 보장해줍니다.(고립화 보장)  
 
-
+*종류*
+![]({{ site.baseurl }}/images/Brutekoon/IDS/p1.PNG)
 
