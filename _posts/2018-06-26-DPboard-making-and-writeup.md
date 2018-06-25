@@ -63,7 +63,7 @@ hidden 값으로 유저의 `PHPSESSID`가 들어갑니다. 이를 이용한 PHP 
 	$result = mysqli_query($conn,$query);
 
 	while($row = mysqli_fetch_array($result)) {
-		if($_COOKIE["PHPSESSID"] != "m0jlh9fk2kdnsdsa2ai4bkal0t") {
+		if($_COOKIE["PHPSESSID"] != "admin's PHPSESSID(is not real)") {
 			if($row['content'] == "FLAG(is not real)") {
 				echo "<marquee>Do Not Hack!</marquee>";
 			}
