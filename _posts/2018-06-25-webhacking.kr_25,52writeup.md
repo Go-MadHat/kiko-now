@@ -1,7 +1,7 @@
 ---
-layout:post
-title:"webhacking.kr 25번, 52번 writeup"
-excerpt_separator:<!--more-->
+layout: post
+title: "webhacking.kr 25번, 52번 writeup"
+excerpt_separator: <!--more-->
 tags:
  -writeup
  -webhacking.kr
