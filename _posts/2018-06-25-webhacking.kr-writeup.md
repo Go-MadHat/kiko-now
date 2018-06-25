@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "webhacking.kr 25¹ø_52¹ø writeup"
+title: "[webhacking.kr] 25ë²ˆ/52ë²ˆ writeup"
 excerpt_separator: <!--more-->
 tags: 
  - writeup
@@ -8,46 +8,46 @@ tags:
  - rlawogns
 
 ---
-webhacking.kr¿¡ ÀÖ´Â 25¹ø°ú 52¹ø ¹®Á¦¸¦ Ç®¾îº¸¾Ò´Ù.
+webhacking.krì— ìžˆëŠ” 25ë²ˆê³¼ 52ë²ˆ ë¬¸ì œë¥¼ í’€ì–´ë³´ì•˜ë‹¤.  
 
-25¹ø ¹®Á¦´Â ¾Æ·¡¿Í °°´Ù.
+25ë²ˆ ë¬¸ì œëŠ” ì•„ëž˜ì™€ ê°™ë‹¤.  
 
 ![]({{ site.baseurl }}/images/rlawogns/webhacking.kr_25_52writeup/25.PNG)
 
-Ã³À½È­¸éÀº hello worldÀÌ Ãâ·ÂÀÌ µÇ°í ?file=helloÀÌ ÀûÇôÀÖ´Â °ÍÀ» º¼ ¼ö°¡ ÀÖ´Ù.
+ì²˜ìŒí™”ë©´ì€ hello worldì´ ì¶œë ¥ì´ ë˜ê³  ?file=helloì´ ì í˜€ìžˆëŠ” ê²ƒì„ ë³¼ ìˆ˜ê°€ ìžˆë‹¤.
 
-helloµÚ¿¡ .txt¸¦ ¾È ºÙ¿´À½¿¡µµ hello.txtÀÇ ³»¿ëÀ¸·Î À§ÃßµÇ´Â ³»¿ëÀÌ Ãâ·ÂµÇ´Â °É·Î ºÁ¼­
+helloë’¤ì— .txtë¥¼ ì•ˆ ë¶™ì˜€ìŒì—ë„ hello.txtì˜ ë‚´ìš©ìœ¼ë¡œ ìœ„ì¶”ë˜ëŠ” ë‚´ìš©ì´ ì¶œë ¥ë˜ëŠ” ê±¸ë¡œ ë´ì„œ
 
-.txt¸¦ ÀÚµ¿À¸·Î ºÙ¿©ÁÖ´Â °Í °°´Ù.
+.txtë¥¼ ìžë™ìœ¼ë¡œ ë¶™ì—¬ì£¼ëŠ” ê²ƒ ê°™ë‹¤.
 
-password.phpÀÇ ³»¿ëÀ» ºÁ¾ßÇÒ °Í °°À¸¹Ç·Î
+password.phpì˜ ë‚´ìš©ì„ ë´ì•¼í•  ê²ƒ ê°™ìœ¼ë¯€ë¡œ
 
-flie=password.php¸¦ ÇØÁÖ°í %00À» ºÙ¿© µÚÀÇ ºÙÀ» .txt¸¦ ¹«½ÃÇÏ¿© Áá´õ´Ï
+flie=password.phpë¥¼ í•´ì£¼ê³  %00ì„ ë¶™ì—¬ ë’¤ì˜ ë¶™ì„ .txtë¥¼ ë¬´ì‹œí•˜ì—¬ ì¤¬ë”ë‹ˆ
 
 ![]({{ site.baseurl }}/images/rlawogns/webhacking.kr_25_52writeup/25clear.PNG)
 
-ÀÌ¿Í °°ÀÌ 25¹ø ¹®Á¦ÀÇ ÆÐ½º¿öµå°¡ ³ª¿Ô°í ÀÌ¸¦ ÀÔ·ÂÇÏ¿© ¹®Á¦¸¦ Ç®°Ô µÇ¾ú´Ù.
+ì´ì™€ ê°™ì´ 25ë²ˆ ë¬¸ì œì˜ íŒ¨ìŠ¤ì›Œë“œê°€ ë‚˜ì™”ê³  ì´ë¥¼ ìž…ë ¥í•˜ì—¬ ë¬¸ì œë¥¼ í’€ê²Œ ë˜ì—ˆë‹¤.
 
-52¹ø ¹®Á¦´Â ¾Æ·¡¿Í °°´Ù.
+52ë²ˆ ë¬¸ì œëŠ” ì•„ëž˜ì™€ ê°™ë‹¤.
 
 ![]({{ site.baseurl }}/images/rlawogns/webhacking.kr_25_52writeup/52_1.PNG)
 
-Çì´õÀÎÁ§¼Ç¿¡ °üÇÑ ¹®Á¦¶ó°í ¶±ÇÏ´Ï ¾Ë·ÁÁÖ°í ÀÖ´Ù.
+í—¤ë”ì¸ì ì…˜ì— ê´€í•œ ë¬¸ì œë¼ê³  ë–¡í•˜ë‹ˆ ì•Œë ¤ì£¼ê³  ìžˆë‹¤.
 
-Çì´õ»ý¼ºÀ» ´©¸£¸é ¾Æ·¡¿Í °°ÀÌ id=wogns0411ÀÌ¶ó´Â °ÍÀÌ »ý±â´Â °ÍÀ» º¼ ¼ö°¡ ÀÖ´Ù.
+í—¤ë”ìƒì„±ì„ ëˆ„ë¥´ë©´ ì•„ëž˜ì™€ ê°™ì´ id=wogns0411ì´ë¼ëŠ” ê²ƒì´ ìƒê¸°ëŠ” ê²ƒì„ ë³¼ ìˆ˜ê°€ ìžˆë‹¤.
 
 ![]({{ site.baseurl }}/images/rlawogns/webhacking.kr_25_52writeup/52_2.PNG)
 
-¹®Á¦¸¦ º¸¸é $_GET[id]·Î Çì´õÀÎÁ§¼ÇÀ» ÇØ¼­ id=wogns0411 ÄíÅ°¸¦ »ý¼ºÇÏ¶ó°í µÇ¾îÀÖ´Ù.
+ë¬¸ì œë¥¼ ë³´ë©´ $_GET[id]ë¡œ í—¤ë”ì¸ì ì…˜ì„ í•´ì„œ id=wogns0411 ì¿ í‚¤ë¥¼ ìƒì„±í•˜ë¼ê³  ë˜ì–´ìžˆë‹¤.
 
-±×·¡¼­ Set-cookie¸¦ »ç¿ëÇØ ÄíÅ°¸¦ »ý¼ºÇÏ·Á°í Çß´Âµ¥ ¾Æ¹«¸® ÇØµµ ¾ÈµÇ¼­
+ê·¸ëž˜ì„œ Set-cookieë¥¼ ì‚¬ìš©í•´ ì¿ í‚¤ë¥¼ ìƒì„±í•˜ë ¤ê³  í–ˆëŠ”ë° ì•„ë¬´ë¦¬ í•´ë„ ì•ˆë˜ì„œ
 
-ÀÌ°ÍÀú°Í µÚÁ®º¸¾Ò´õ´Ï Set-cookie¸¦ ÇÏ¸é Ç®¸®Áö ¾Ê°í
+ì´ê²ƒì €ê²ƒ ë’¤ì ¸ë³´ì•˜ë”ë‹ˆ Set-cookieë¥¼ í•˜ë©´ í’€ë¦¬ì§€ ì•Šê³ 
 
-Å¬¸®¾î Á¶°Ç¿¡ ÀÖ´Â clearºÎºÐÀ» ÇØÁà¾ßÇÑ´Ù´Â °ÍÀ» ¾Ë°Ô µÇ¾ú´Ù.
+í´ë¦¬ì–´ ì¡°ê±´ì— ìžˆëŠ” clearë¶€ë¶„ì„ í•´ì¤˜ì•¼í•œë‹¤ëŠ” ê²ƒì„ ì•Œê²Œ ë˜ì—ˆë‹¤.
 
-±×·¡¼­ CRLF(Ä³¸®Áö ¸®ÅÏ, ¶óÀÎ ÇÇµå)¸¦ ÀÌ¿ëÇØ
+ê·¸ëž˜ì„œ CRLF(ìºë¦¬ì§€ ë¦¬í„´, ë¼ì¸ í”¼ë“œ)ë¥¼ ì´ìš©í•´
 
-id=wogns0411%0a%0dclear: wogns0411¸¦ ÇÏ¿´´õ´Ï Ç®¸®´Â °ÍÀ» º¼ ¼ö ÀÖ¾ú´Ù.
+id=wogns0411%0a%0dclear: wogns0411ë¥¼ í•˜ì˜€ë”ë‹ˆ í’€ë¦¬ëŠ” ê²ƒì„ ë³¼ ìˆ˜ ìžˆì—ˆë‹¤.
 
 ![]({{ site.baseurl }}/images/rlawogns/webhacking.kr_25_52writeup/52clear.PNG)
