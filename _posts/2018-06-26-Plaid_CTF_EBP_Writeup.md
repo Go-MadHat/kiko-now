@@ -89,6 +89,6 @@ ebp를 확인해보면 0xffffd5b8 위치하여 0xffffd5d8을 가리키고 있습
  20 p.interactive()
 
 ```
-![image](./img/plaidctf_ebp_writeup_07.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_07.PNG)
 
 exploit 성공!!! 수고하셨습니당~~
