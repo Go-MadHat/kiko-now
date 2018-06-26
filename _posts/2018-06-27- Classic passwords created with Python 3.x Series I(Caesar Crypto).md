@@ -38,7 +38,8 @@ tags:
 
 파이썬 Tkinter을 사용해 GUI구현을 해보았습니다
 
-{% highlight python %}
+<pre><code>
+
 import tkinter as tk
 from tkinter import messagebox
 import time
@@ -111,12 +112,12 @@ decode_btn.pack(fill = "x")
 quit_btn.pack(fill = "x")
 
 root.mainloop()
-{% endhightlight %}
-'''
+</code></pre>
+
 
 위의 소스코드는 실은 대부분이 GUI구현을 위한 것이고 실질적 암호 알고리즘은 아래 정도면 충분합니다.
 
-{% highlight python %}
+<pre><code>
 #평문 입력
 string = input("문장을 입력하세요 > ")
 #키값 입력
@@ -138,29 +139,31 @@ def caesar(some):
             new_text += alphabet[(alphabet.index(letter) + int(key%len(alphabet)))%len(alphabet)]
     return new_text
 print("알고리즘 실행", caesar(string))
-{% endhightlight %}
+</code></pre>
 
 아스키코드를 사용하면 더 짧아집니다.
 
-{% highlight python %}
+<pre><code>
 string = input(" ▶ 문장을 입력하세요 : ")
 key = int(input(" ▶ key 값을 입력하세요 : "))
 print(">>> password : ",''.join([chr(ord(i)+key) for i in string]))
-{% endhightlight %}
+</code></pre>
 
-**원리
-![caesar_cipher_left_shift_of_19_circle](https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_19_circle.png)
+##원리
+<img src="https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_19_circle.png" width="40%">
 
 아주 간단하게도 그림에서 보시는대로 두 문자열을 서로 맞댄 후 한 문자열을 이동한 것입니다.
 이동한 칸 수가 바로 우리가 키값이라고 부르는 그것이죠.
+
 ![caesar_cipher_left_shift_of_3-svg](https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_3-svg.png)
 
 A B C **D** E F G H I J K
     
-    > > >
+   > > >
     
 __a__ b c d e f g h i j k
- 키값 3 입력 == 3칸 이동
+
+키값 3 입력 == 3칸 이동
 
 ************
 보다시피 암호 알고리즘이 널리 알려져있고 키값의 경우의 수가 고작 25가지 밖에 안되기 때문에 복호화시 그냥 경우의 수를 다 때려박아서 암호해제가 가능하고 실제로 그렇게 복호화해서 손쉽게 키값과 평문을 역추적하는 쉬운? 암호 알고리즘입니다.
