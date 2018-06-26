@@ -156,11 +156,11 @@ print(">>> password : ",''.join([chr(ord(i)+key) for i in string]))
 
 ![caesar_cipher_left_shift_of_3-svg](https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_3-svg.png)
 
- A B C **D** E F G H I J K
+A B C **D** E F G H I J K
     
-=>=>=>
+ > > >
 
- __a__ b c d e f g h i j k
+__a__ b c d e f g h i j k
 
 키값 3 입력 == 3칸 이동
 
