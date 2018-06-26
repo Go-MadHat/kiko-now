@@ -7,11 +7,13 @@ tags :
   - GaeKo
 ---
 
-### 안녕하세요. 암호를 공부하는 Gaeko입니다. 
-### 암호 공부를 위해 WeChall crypto문제를 풀기 시작하였습니다. 그래서 이번 포스팅을 푼 문제에 대한 writeup을 올리기로 하였습니다. 
+ 안녕하세요. 암호를 공부하는 Gaeko입니다. 
+ 암호 공부를 위해 WeChall crypto문제를 풀기 시작하였습니다. 그래서 이번 포스팅을 푼 문제에 대한 writeup을 올리기로 하였습니다. 
 
 ## Training: Crypto - Caesar I
+
 **[문제]**
+
 ![문제](https://t1.daumcdn.net/cfile/tistory/99FFBE4E5B327C7408)
 
 **[풀이]**
@@ -109,6 +111,7 @@ cf. 문자열 관련 함수 <https://kimdoky.github.io/python/2017/10/06/library
 ## Training: Crypto - Transposition I
 
 **[문제]**
+
 ![문제](https://t1.daumcdn.net/cfile/tistory/9926A94F5B3292661F)
 
 암호문 
