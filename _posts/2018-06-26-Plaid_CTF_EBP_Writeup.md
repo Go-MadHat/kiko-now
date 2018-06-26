@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Plaid CTF EBP Writeup"
+title: ! "Plaid CTF EBP Writeup"
+excerpt_separator: <!--more-->
+comments : true
 tags:
-    - writeup
-    - Plaid CTF
-    - pwnable
-    - t4ngo
+  - Writeup
+  - CTF
+  - Plaid CTF
+  - t4ngo
 ---
-
-# Plaid CTF EBP Writeup
 
 ctf 문제를 많이 풀어보지는 못했지만 plaid ctf에서 괜찮은 문제가 많은 것 같아 찾아보던 중 EBP라는 문제가 재밌어보여서 포스팅하게 되었습니다!
 
