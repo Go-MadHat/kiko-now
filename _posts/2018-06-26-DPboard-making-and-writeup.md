@@ -5,7 +5,7 @@ excerpt_separator: <!--more-->
 tags:
   - MitNy
   - SQL injection
-  - writeup
+  - Write-up
   - WebHacking
 ---
 

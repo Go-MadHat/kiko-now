@@ -4,7 +4,7 @@ title: ! "Plaid CTF EBP Writeup"
 excerpt_separator: <!--more-->
 comments : true
 tags:
-  - Writeup
+  - Write-up
   - CTF
   - Plaid CTF
   - t4ngo
