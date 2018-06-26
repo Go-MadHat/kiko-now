@@ -7,7 +7,6 @@ tags :
 	- File Inclusion Attacks
 	- sang-gamja
 ---
-# File Inclusion Attacks
 
 File Inclusion Attack이란 공격자가 php script를 통해 웹서버에 파일을 올리게 하는 것을 가능하게 하는 공격기법이다.
 
