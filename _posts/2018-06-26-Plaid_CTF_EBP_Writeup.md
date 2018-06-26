@@ -16,19 +16,19 @@ ctf 문제를 많이 풀어보지는 못했지만 plaid ctf에서 괜찮은 문�
 
 먼저 Binary를 실행하면 아래와 같이 그냥 입력을 받고 그대로 출력해주는 동작이 끝입니다.
 
-![image](./img/plaidctf_ebp_writeup_01.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_01.PNG)
 
 그럼, 좀 더 자세히 알아보기 위해 IDA로 까봅시다!
 
-![image](./img/plaidctf_ebp_writeup_02.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_02.PNG)
 
 main에서는 buf에 1024byte만큼 입력을 받고 echo() 함수를 호출합니다.
 
-![image](./img/plaidctf_ebp_writeup_03.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_03.PNG)
 
 ehco() 함수는 make_response() 함수를 호출하고 puts()로 response를 출력합니다.
 
-![image](./img/plaidctf_ebp_writeup_04.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_04.PNG)
 
 make_response() 함수를 보면 snprintf()를 이용하여 buf의 값을 response에 복사하여 주는 것을 알 수 있습니다.
 
@@ -38,7 +38,7 @@ make_response() 함수를 보면 snprintf()를 이용하여 buf의 값을 respon
 
 다음으로 snprintf()가 호출되기 직전의 stack 상황을 살펴봅니다.
 
-![image](./img/plaidctf_ebp_writeup_05.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_05.PNG)
 
 ebp를 확인해보면 0xffffd5b8 위치하여 0xffffd5d8을 가리키고 있습니다. 여기서 당연하게도 0xffffd5d8은 이전 함수 프레임의 ebp를 뜻하겠죠? >_0
 
@@ -53,7 +53,7 @@ ebp를 확인해보면 0xffffd5b8 위치하여 0xffffd5d8을 가리키고 있습
 
 그렇다면 이제 FSB를 이용하여 EBP 값이 얼마나 떨어져있는지 확인해 봅시다!
 
-![image](./img/plaidctf_ebp_writeup_06.PNG)
+![image](/images/t4ngo/plaidctf_ebp_wirteup/plaidctf_ebp_writeup_06.PNG)
 
 4번째에 0xffffd5f8이 찍히긴 하지만 우리가 확인한 0xffffd5d8이 아닌 0xffffd5f8이 들어있습니다! 하지만, ret는 제대로 나오는 군요! 아마, 실제 메모리에 올라가면서 살짝 뒤로 밀린 것 같네요! O_O
 
