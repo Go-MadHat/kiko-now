@@ -158,7 +158,7 @@ print(">>> password : ",''.join([chr(ord(i)+key) for i in string]))
 
 A B C **D** E F G H I J K
     
- > > >
+=> > >
 
 __a__ b c d e f g h i j k
 
