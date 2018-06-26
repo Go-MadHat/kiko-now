@@ -2,7 +2,6 @@
 layout : post
 title: ! "Classic passwords created with Python 3.x Series I(Caesar Crypto)"
 tags:
-- tags
 - crypto
 - caesar_crypto
 - caesar
@@ -21,10 +20,10 @@ tags:
 
 저는 암호학을 공부하고 있는데 왠지 컴퓨터 해킹과 해커의 시조인 암호학이 다소 인기가 없는 것 같네요..
 
-그래서 이번 기회에 고전암호의 암호화와 복호화하는 법을 간단하게 파이썬 3.x를 이용해서 시리즈로 소개하고자 합니다.
+그래서 이번 기회에 간단하게 파이썬 3.x를 이용해서 고전암호의 암호화와 복호화하는 법을 시리즈로 소개하고자 합니다.
 
 
-**시저암호(카이사르 암호)
+**시저암호(카이사르 암호)**
 ------
 * 시저암호(카이사르 암호)란 ? 
 
@@ -147,7 +146,7 @@ key = int(input(" ▶ key 값을 입력하세요 : "))
 print(">>> password : ",''.join([chr(ord(i)+key) for i in string]))
 </code></pre>
 
-**원리
+**원리**
 ------
 <img src="https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_19_circle.png" width="40%">
 
