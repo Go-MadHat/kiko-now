@@ -10,7 +10,7 @@ tags:
 ---
 
 
-안녕하세요. 홍성빈입니다.
+안녕하세요. Vertex입니다.
 
 먼저 저는 Angr에 대한 지식이 거의 없음을 알려드립니다.  
 
@@ -22,10 +22,9 @@ DEFCON 2016 예선 baby-re 문제의 패러디가 있었습니다.
 
 소개드리게 되어 매우 기쁩니다.
 
-그 친구가 Angr를 알게 된 DEFCON 2016 예선문제 baby-re의 라이트업을 소개드리겠습니다.
-
-
 <!--more-->
+
+그 친구가 Angr를 알게 된 DEFCON 2016 예선문제 baby-re의 라이트업을 소개드리겠습니다.
 
 ```
 http://hack.carleton.team/2016/05/21/defcon-ctf-qualifier-2016-baby-re/
