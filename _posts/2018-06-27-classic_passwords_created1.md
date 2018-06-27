@@ -108,7 +108,7 @@ root.mainloop()
 
 위의 소스코드는 실은 대부분이 GUI구현을 위한 것이고 실질적 암호 알고리즘은 아래 정도면 충분합니다.  
 
-```
+```python
 #평문 입력
 string = input("문장을 입력하세요 > ")
 #키값 입력
@@ -134,7 +134,7 @@ print("알고리즘 실행", caesar(string))
 
 아스키코드를 사용하면 더 짧아집니다.  
 
-```
+```python
 string = input(" ▶ 문장을 입력하세요 : ")
 key = int(input(" ▶ key 값을 입력하세요 : "))
 print(">>> password : ",''.join([chr(ord(i)+key) for i in string]))
