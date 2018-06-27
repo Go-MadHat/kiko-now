@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: ! "[WeChall] Training: Crypto - Caesar I, Transposition I WriteUp"
