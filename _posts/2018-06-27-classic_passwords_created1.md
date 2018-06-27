@@ -3,17 +3,9 @@ layout : post
 title: ! "Classic passwords created with Python 3.x Series I(Caesar Crypto)"
 tags:
 - crypto
-- caesar_crypto
 - caesar
-- python
 - python3
-- python_3.x
 - S.Young
-- Just for SoJoo.Young
-- 컴린이
-- go-madhat
-- MADHAT
-- Team MADHAT
 ---
 
 안녕하세요. Team MADHAT의 클린한~ 컴린이! S.Young입니다.
@@ -27,18 +19,19 @@ tags:
 ------
 * 시저암호(카이사르 암호)란 ? 
 
-고대 로마의 황제이자 군인었던 카이사르가 즐겨 사용했던 암호 알고리즘입니다.
+고대 로마의 황제이자 군인었던 카이사르가 즐겨 사용했던 암호 알고리즘입니다.  
 
-그래서 시저암호(카이사르 암호)라고 불립니다.
+그래서 시저암호(카이사르 암호)라고 불립니다.  
 
-대표적인 치환형 암호이자 덧셈형 암호입니다.
+대표적인 치환형 암호이자 덧셈형 암호입니다.  
 
-수식은 **C=E(p)=(p+k)mod(26)** 또는 **f(x)=x+k(mod26)**
+수식은 **C=E(p)=(p+k)mod(26)** 또는 **f(x)=x+k(mod26)**  
 
-복호화는 함수f(x)의 역함수를 구하면됩니다 **f(x)^-1=x-k(mod26)**
+복호화는 함수f(x)의 역함수를 구하면됩니다. **f(x)^-1=x-k(mod26)**  
 
-파이썬 Tkinter을 사용해 GUI구현을 해보았습니다
-<pre><code>
+파이썬 Tkinter을 사용해 GUI구현을 해보았습니다.  
+
+```python
 import tkinter as tk
 from tkinter import messagebox
 import time
@@ -111,11 +104,11 @@ decode_btn.pack(fill = "x")
 quit_btn.pack(fill = "x")
 
 root.mainloop()
-</code></pre>
+```
 
+위의 소스코드는 실은 대부분이 GUI구현을 위한 것이고 실질적 암호 알고리즘은 아래 정도면 충분합니다.  
 
-위의 소스코드는 실은 대부분이 GUI구현을 위한 것이고 실질적 암호 알고리즘은 아래 정도면 충분합니다.
-<pre><code>
+```
 #평문 입력
 string = input("문장을 입력하세요 > ")
 #키값 입력
@@ -137,23 +130,25 @@ def caesar(some):
             new_text += alphabet[(alphabet.index(letter) + int(key%len(alphabet)))%len(alphabet)]
     return new_text
 print("알고리즘 실행", caesar(string))
-</code></pre>
+```
 
-아스키코드를 사용하면 더 짧아집니다.
-<pre><code>
+아스키코드를 사용하면 더 짧아집니다.  
+
+```
 string = input(" ▶ 문장을 입력하세요 : ")
 key = int(input(" ▶ key 값을 입력하세요 : "))
 print(">>> password : ",''.join([chr(ord(i)+key) for i in string]))
-</code></pre>
+```
 
 **원리**
 ------
-<img src="https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_19_circle.png" width="40%">
+
+![]({{ site.baseurl }}/images/s_young/classic_password_create1/cp_01.png)
 
 아주 간단하게도 그림에서 보시는대로 두 문자열을 서로 맞댄 후 한 문자열을 이동한 것입니다.
 이동한 칸 수가 바로 우리가 키값이라고 부르는 그것이죠.
 
-![caesar_cipher_left_shift_of_3-svg](https://github.com/go-madhat/go-madhat.github.io/blob/master/images/Classic%20passwords%20created%20with%20Python%203.x%20Series%20I(Caesar%20Crypto)/caesar_cipher_left_shift_of_3-svg.png)
+![]({{ site.baseurl }}/images/s_young/classic_password_create1/cp_02.png)
 
 A B C **D** E F G H I J K
     
