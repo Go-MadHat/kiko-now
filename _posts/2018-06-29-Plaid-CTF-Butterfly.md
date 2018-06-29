@@ -56,8 +56,8 @@ add $0x48,$rsp instruction을 이용하여 메모리 영역을 다시 복구해�
 
 이를 이용하여 exploit을 하면된다!
 
-###Exploit
-
+### Exploit
+추후공개..!
 
 
 
