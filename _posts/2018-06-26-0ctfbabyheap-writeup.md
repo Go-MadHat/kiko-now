@@ -326,7 +326,8 @@ Last Remainder: 0
 }
 ```  
 
-#### 2. 1번과 2번 chunk를 free합니다. : free한 2번 chunk의 fd에 이전 1번 chunk의 주소가 들어있는 것을 볼 수 있습니다.  
+#### 2. 1번과 2번 chunk를 free합니다.  
+free한 2번 chunk의 fd에 이전 1번 chunk의 주소가 들어있는 것을 볼 수 있습니다.  
 
 ```  
 pwndbg> heap
@@ -383,7 +384,8 @@ Last Remainder: 0
 }
 ```  
 
-#### 3. free한 2번 chunk의 fd를 4번 smallbin chunk를 가리키도록 조작합니다 : overflow를 이용해 1byte만 조작해 주면됩니다.  
+#### 3. free한 2번 chunk의 fd를 4번 smallbin chunk를 가리키도록 조작합니다.  
+overflow를 이용해 1byte만 조작해 주면됩니다.  
 
 ```  
 pwndbg> x/10gx 0x555555757060
@@ -394,11 +396,14 @@ pwndbg> x/10gx 0x555555757060
 0x5555557570a0:	0x0000000000000000	0x0000000000000000
 ```  
 
-#### 4. 2번 chunk에서 overflow를 일으켜 4번 smallbin을 fastbin chunk 크기로 만들어 줍니다. : security check가 이루어질 때 size를 체크하므로 크기를 조작해줘야 합니다!  
+#### 4. 2번 chunk에서 overflow를 일으켜 4번 smallbin을 fastbin chunk 크기로 만들어 줍니다.  
+security check가 이루어질 때 size를 체크하므로 크기를 조작해줘야 합니다!  
 
-#### 5. 1번과 2번 chunk를 다시 allocate합니다. : 원래 1번을 가리키던 2번 chunk의 fd가 4번 chunk를 가리키게되고, allocate하면서 4번 chunk랑 병합하게 됩니다!  
+#### 5. 1번과 2번 chunk를 다시 allocate합니다.  
+원래 1번을 가리키던 2번 chunk의 fd가 4번 chunk를 가리키게되고, allocate하면서 4번 chunk랑 병합하게 됩니다!  
 
-#### 6. 그리고 4번 chunk의 크기를 다시 smallbin 크기로 만들어주고 free합니다. free하면 smallbin 특성상 unsorted bin이 되기 때문에 fd와 bk에 main_arena+88 주소가 남게 됩니다. 이 점을 이용하면 dump를 통해 main_arena+88의 leak이 가능합니다.  
+#### 6. 그리고 4번 chunk의 크기를 다시 smallbin 크기로 만들어주고 free합니다.  
+free하면 smallbin 특성상 unsorted bin이 되기 때문에 fd와 bk에 main_arena+88 주소가 남게 됩니다. 이 점을 이용하면 dump를 통해 main_arena+88의 leak이 가능합니다.  
 
 ```  
 [chaem이랑 짚고가기]
