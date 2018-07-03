@@ -3,10 +3,9 @@ layout: post
 title: "[webhacking.kr] 25번/52번 writeup"
 excerpt_separator: <!--more-->
 tags: 
- - writeup
+ - Write-up
  - webhacking.kr
  - rlawogns
-
 ---
 webhacking.kr에 있는 25번과 52번 문제를 풀어보았다.  
 
