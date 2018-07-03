@@ -107,7 +107,7 @@ time(0)의 값을 같으므로 같은 난수생성을 하게 되고, 같은 Cana
 
 급마무리하는 느낌이 있지만, 익스코드는 아래와 같다.
 
-```
+```python
 from pwn import *
 import string
 
