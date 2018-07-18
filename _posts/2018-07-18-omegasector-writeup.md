@@ -6,11 +6,10 @@ tags:
   - Write-up
   - CTF
   - MeePwn2018
+  - ccoma
 ---
 
-`OMEGASECTOR` 문제는 가장 오랜 시간 ~~그렇다고 해도 길진 않았지만~~ 고민했던 문제이다.  
-
-역시나 대회 기간에는 풀지 못했다(ㅠㅠ).  
+`OMEGASECTOR`는 `MeePwn 2018 CTF`에 출제되었던 문제이다.  
 
 풀이를 보며 `아 왜 난 이 생각을 못했었지!` 한 점이 많아서 Write up을 작성 해 본다.  
 
