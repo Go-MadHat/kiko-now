@@ -10,6 +10,7 @@ tags:
 ---
 
 ISITDTU CTF 2018 Quals 100포인트 문제 IZ 풀이입니다.
+<!--more-->
 
 ```php
 <?php 
