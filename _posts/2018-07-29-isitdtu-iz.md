@@ -109,7 +109,7 @@ bool(true)
 ```
 그래서
 `//?_=0.0`과 같이 0.0을 매개변수로 전달해주면 플래그가 뜨게 된다.
-![]({{ site.baseurl }}/images/mitny/iz/iz_flag.png)
+![]({{ site.baseurl }}/images/mitny/iz/iz_0flag.png)
 
 `//?_=a`, `?%23&_=a`로도 플래그를 얻을 수 있다.
 
