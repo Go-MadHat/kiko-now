@@ -66,7 +66,7 @@ simulation_manager에 대해서 간단히 살펴보니 symbolic execution을 제
 구글에서 다른 분들이 사용한 코드들도 찾아보니 대체로 비슷한 코드였다.
 살펴보면 아까전에 비해서 훨씬 더 복잡해진 것을 확인할 수 있다.
 
-```python
+``` python
 import angr
 import claripy
 
@@ -96,9 +96,14 @@ print(flag)
 ```
 
 먼저 claripy는 solver engine으로서 제약 조건을 해결하는 기능을 제공하며, 사용방법은 z3와 유사하다고 한다.
+
 (참고 : https://www.lazenca.net/display/TEC/angr )
+
 (참고 : https://docs.angr.io/docs/claripy.html )
+
 이 코드에서는 int형으로 13개의 변수를 선언해주기 위해서 사용되었다.
+
+scanf_hook
 
 scanf_hook은 scanf를 연속으로 넣어주는 부분을 처리하기 위해서 사용되었다.
 scanf_count를 세면서 vars[]에 값을 넣는다.
@@ -111,7 +116,7 @@ __isoc99_scanf가 나올 때 마다 scanf_hook을 사용한다.
 
 그 후 'simulation _ manager' 를 사용하여 옵션을 넣어주고,
 sm.explore(find=0x402936, avoid=0x402946)을 통해 이전 코드와 비슷하게 주소를 정해준다.
-그리고 for문을 돌면서 찾은 flag값들을 
+그리고 for문을 돌면서 찾은 flag값들을 출력해준다.
 
 실행 결과는 아래와 같다
 
