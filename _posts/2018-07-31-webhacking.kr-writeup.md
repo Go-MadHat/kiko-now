@@ -2,7 +2,7 @@
 
 layout: post
 
-title: "[webhacking.kr] 23¹ø/11¹ø writeup"
+title: ! "[webhacking.kr] 23ë²ˆ/11ë²ˆ writeup"
 
 excerpt_separator: <!--more-->
 
@@ -17,9 +17,9 @@ tags:
 ---
 
 
-webhacking.kr¿¡ ÀÖ´Â 23¹ø°ú 11¹ø ¹®Á¦¸¦ Ç®¾îº¸¾Ò´Ù.
+webhacking.krì— ìˆëŠ” 23ë²ˆê³¼ 11ë²ˆ ë¬¸ì œë¥¼ í’€ì–´ë³´ì•˜ë‹¤.
 
-23¹ø ¹®Á¦´Â ¾Æ·¡¿Í °°´Ù.  
+23ë²ˆ ë¬¸ì œëŠ” ì•„ë˜ì™€ ê°™ë‹¤.  
 
 
 
@@ -30,95 +30,105 @@ webhacking.kr¿¡ ÀÖ´Â 23¹ø°ú 11¹ø ¹®Á¦¸¦ Ç®¾îº¸¾Ò´Ù.
 ![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_01.PNG)
 
 
-¹®Á¦¸¦ º¸´Ï <script>alert(1);</script>¸¦ ³Ö´Â°Ô ¹Ì¼ÇÀÌ¶ó°í ¾Ë·ÁÁØ´Ù.
+ë¬¸ì œë¥¼ ë³´ë‹ˆ <script>alert(1);</script>ë¥¼ ë„£ëŠ”ê²Œ ë¯¸ì…˜ì´ë¼ê³  ì•Œë ¤ì¤€ë‹¤.
 
-ÀÏ´ÜÀº ³ÖÀ¸¶ó´Â´ë·Î ³Ö°í Á¦ÃâÀ» ÇØº¸¾Ò´Ù.
+ì¼ë‹¨ì€ ë„£ìœ¼ë¼ëŠ”ëŒ€ë¡œ ë„£ê³  ì œì¶œì„ í•´ë³´ì•˜ë‹¤.
 
 
 
 ![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_02.PNG)
 
-¿ª½Ã³ª no hackÀÌ¶ó´Â ¹®±¸¸¦ Ãâ·ÂÇÏ¸é¼­ ¾È µÈ´Ù°í ÇÑ´Ù.
+ì—­ì‹œë‚˜ no hackì´ë¼ëŠ” ë¬¸êµ¬ë¥¼ ì¶œë ¥í•˜ë©´ì„œ ì•ˆ ëœë‹¤ê³  í•œë‹¤.
 
-¾î¶²°ÍÀÌ ÇÊÅÍ¸µÀÌ °É·ÁÀÖ´ÂÁö ¾Ë¸é ÇÊÅÍ¸µÀ» ÇÇÇØ¼­ ÀûÀ¸¸é ¹®Á¦¸¦ Ç® ¼ö ÀÖÀ»µí ÇÑµ¥ ±×°É ¸ğ¸¥´Ù.
+ì–´ë–¤ê²ƒì´ í•„í„°ë§ì´ ê±¸ë ¤ìˆëŠ”ì§€ ì•Œë©´ í•„í„°ë§ì„ í”¼í•´ì„œ ì ìœ¼ë©´ ë¬¸ì œë¥¼ í’€ ìˆ˜ ìˆì„ë“¯ í•œë° ê·¸ê±¸ ëª¨ë¥¸ë‹¤.
 
-±×·¡¼­ ÀÏ´Ü ¾î¶² ÇÊÅÍ¸µÀÌ °É·ÁÀÖÀ»Áö À¯Ãß¸¦ ÇØº¸±â À§ÇØ ÀÌ°ÍÀú°Í Àû¾îº¸¾Ò´Ù.
-
-
-
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_03.PNG)
+ê·¸ë˜ì„œ ì¼ë‹¨ ì–´ë–¤ í•„í„°ë§ì´ ê±¸ë ¤ìˆì„ì§€ ìœ ì¶”ë¥¼ í•´ë³´ê¸° ìœ„í•´ ì´ê²ƒì €ê²ƒ ì ì–´ë³´ì•˜ë‹¤.
 
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_04.PNG)
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_03.PNG)
 
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_05.PNG)
+
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_04.PNG)
 
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_06.PNG)
 
-³× ±ÛÀÚ¿Í µÎ ±ÛÀÚ¸¦ ³Ö¾úÀ» ¶§´Â no hackÀÌ¶ó´Â ¹®±¸°¡ Ãâ·ÂµÇ¾ú°í a¸¦ ³Ö¾úÀ» ¶§´Â a°¡ ±×´ë·Î Ãâ·ÂÀÌ µÇ¾ú´Ù.
-
-±×¸®°í <µµ ÇÊÅÍ¸µÀÌ µÇÁö ¾Ê°í Ãâ·ÂÀÌ µÇ´Â °ÍÀ» º¸¾Æ 2±ÛÀÚ ÀÌ»óÀ» ÀûÀ¸¸é
-
-ÇÊÅÍ¸µ¿¡ °É·Á no hackÀÌ ¶ß´Â °ÍÀ¸·Î À¯ÃßÇÒ¼ö°¡ ÀÖ¾ú´Ù.
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_05.PNG)
 
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_07.PNG)
 
-Àú ÇÊÅÍ¸µÀ» ÇÇÇØ°¡±â À§ÇØ ÁÖ¼®À» ÀÌ¿ëÀ» Çß´Ù.
-
-a¸¦ Àû°í %00À» Àû¾î ÁÖ¼®À» ÇØÁØ ´ÙÀ½ asd¸¦ ÀûÀ¸´Ï aasd¶ó°í ³ª¿À´Â °ÍÀ» º¼ ¼ö°¡ ÀÖ¾ú´Ù.
-
-±×·³ ÀÌÁ¦ ¹æ¹ıÀ» ¾Ë¾ÒÀ¸´Ï asd´ë½Å ¹®Á¦¿¡¼­ ³ÖÀ¸¶ó°í ÇÑ °ÍÀ» ³Ö¾îºÃ´Ù.
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_06.PNG)
 
 
+ë„¤ ê¸€ìì™€ ë‘ ê¸€ìë¥¼ ë„£ì—ˆì„ ë•ŒëŠ” no hackì´ë¼ëŠ” ë¬¸êµ¬ê°€ ì¶œë ¥ë˜ì—ˆê³  aë¥¼ ë„£ì—ˆì„ ë•ŒëŠ” aê°€ ê·¸ëŒ€ë¡œ ì¶œë ¥ì´ ë˜ì—ˆë‹¤.
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_08.PNG)
+ê·¸ë¦¬ê³  <ë„ í•„í„°ë§ì´ ë˜ì§€ ì•Šê³  ì¶œë ¥ì´ ë˜ëŠ” ê²ƒì„ ë³´ì•„ 2ê¸€ì ì´ìƒì„ ì ìœ¼ë©´
 
-Ç®¸± ÁÙ ¾Ë¾Ò´Âµ¥ ¸ÓÁö...
-
-ÆäÀÌÁö°¡ ÀÛµ¿À» ÇÏÁö ¾Ê´Â´Ù´Â ¹®±¸°¡ ¶á´Ù.
-
-¿­½ÉÈ÷ °í¹ÎÇÏ´Ù Å©·Ò¸»°í ÀÎÅÍ³İÀÍ½ºÇÃ·Î·¯·Î ÇØº¸¸é µÇÁö ¾ÊÀ»±îÇØ¼­ ½Ãµµ¸¦ ÇØº¸·Á Çß´Ù.
+í•„í„°ë§ì— ê±¸ë ¤ no hackì´ ëœ¨ëŠ” ê²ƒìœ¼ë¡œ ìœ ì¶”í• ìˆ˜ê°€ ìˆì—ˆë‹¤.
 
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_09.PNG)
-
-±×·±µ¥ ¾îÀÌ¾ø°Ôµµ ÀÌ¹Ì Ç®·ÁÀÖ´Â °ÍÀ» º¼ ¼ö°¡ ÀÖ¾ú´Ù.
-
-¾Æ¸¶µµ ÆäÀÌÁö°¡ ÀÛµ¿ÇÏÁö ¾Ê´Â´Ù°í ¶¹Áö¸¸ ¹®Á¦¿¡¼­ ¿øÇÏ´Â °ÍÀ» ÇÏ¿© ¹®Á¦°¡ Ç®¸° °Í °°´Ù.
-
-11¹ø ¹®Á¦´Â ¾Æ·¡¿Í °°´Ù.
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_07.PNG)
 
 
+ì € í•„í„°ë§ì„ í”¼í•´ê°€ê¸° ìœ„í•´ ì£¼ì„ì„ ì´ìš©ì„ í–ˆë‹¤.
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_10.PNG)
+aë¥¼ ì ê³  %00ì„ ì ì–´ ì£¼ì„ì„ í•´ì¤€ ë‹¤ìŒ asdë¥¼ ì ìœ¼ë‹ˆ aasdë¼ê³  ë‚˜ì˜¤ëŠ” ê²ƒì„ ë³¼ ìˆ˜ê°€ ìˆì—ˆë‹¤.
 
-¹®Á¦¸¦ º¸¸é patÀÇ °ªÀ» Á¤±Ô½ÄÀ¸·Î ¾Ë·ÁÁÖ°í
-
-patÀÇ °ª°ú ¿ì¸®°¡ ÀÔ·ÂÇÒ val°ªÀÌ °°À¸¸é ÆĞ½º¿öµå¸¦ Ãâ·ÂÇØÁÖ´Â µí ÇÏ´Ù.
-
-±×·³ patÀÇ °ª¸¸ ¾Ë¾Æ³»¸é ¹®Á¦¸¦ Ç® ¼ö ÀÖÀ¸´Ï Á¤±Ô½ÄÀ» ÇØ¼®ÇØºÁ¾ß°Ú´Ù.
+ê·¸ëŸ¼ ì´ì œ ë°©ë²•ì„ ì•Œì•˜ìœ¼ë‹ˆ asdëŒ€ì‹  ë¬¸ì œì—ì„œ ë„£ìœ¼ë¼ê³  í•œ ê²ƒì„ ë„£ì–´ë´¤ë‹¤.
 
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_11.PNG)
-
-À§ÀÇ Ç¥¸¦ ÀÌ¿ëÇØ¼­ ÇØ¼®À» ÇØº¸¾Ò´Ù.
-
-_´Â ¹®ÀÚ ±×´ë·Î _ÀÌ°í \tp´Â È¥µ¿Çß¾ú´Âµ¥ ÇÏ³ª°¡ ¾Æ´Ï¶ó \t¿Í ¹®ÀÚpÀÎµí ÇÏ´Ù.
-
-ÅÇÀº %09·Î Àû¾îÁÖ¾ú´Ù.
-
-ÀÌ·¸°Ô ÇØ¼­ 1aaaaa_.219.251.3.64.%09p%09a%09s%09s¶ó´Â °ªÀÌ ³ª¿Ô´Ù.
-
-ÀÌ °ªÀ» valº¯¼ö¿¡ ÀÔ·ÂÇØÁÖ¾ú´õ´Ï ¹®Á¦°¡ Ç®¸®´Â °ÍÀ» º¼ ¼ö°¡ ÀÖ¾ú´Ù.
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_08.PNG)
 
 
-![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_12.PNG)
+í’€ë¦´ ì¤„ ì•Œì•˜ëŠ”ë° ë¨¸ì§€...
+
+í˜ì´ì§€ê°€ ì‘ë™ì„ í•˜ì§€ ì•ŠëŠ”ë‹¤ëŠ” ë¬¸êµ¬ê°€ ëœ¬ë‹¤.
+
+ì—´ì‹¬íˆ ê³ ë¯¼í•˜ë‹¤ í¬ë¡¬ë§ê³  ì¸í„°ë„·ìµìŠ¤í”Œë¡œëŸ¬ë¡œ í•´ë³´ë©´ ë˜ì§€ ì•Šì„ê¹Œí•´ì„œ ì‹œë„ë¥¼ í•´ë³´ë ¤ í–ˆë‹¤.
+
+
+
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_09.PNG)
+
+
+ê·¸ëŸ°ë° ì–´ì´ì—†ê²Œë„ ì´ë¯¸ í’€ë ¤ìˆëŠ” ê²ƒì„ ë³¼ ìˆ˜ê°€ ìˆì—ˆë‹¤.
+
+ì•„ë§ˆë„ í˜ì´ì§€ê°€ ì‘ë™í•˜ì§€ ì•ŠëŠ”ë‹¤ê³  ë–´ì§€ë§Œ ë¬¸ì œì—ì„œ ì›í•˜ëŠ” ê²ƒì„ í•˜ì—¬ ë¬¸ì œê°€ í’€ë¦° ê²ƒ ê°™ë‹¤.
+
+11ë²ˆ ë¬¸ì œëŠ” ì•„ë˜ì™€ ê°™ë‹¤.
+
+
+
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_10.PNG)
+
+
+ë¬¸ì œë¥¼ ë³´ë©´ patì˜ ê°’ì„ ì •ê·œì‹ìœ¼ë¡œ ì•Œë ¤ì£¼ê³ 
+
+patì˜ ê°’ê³¼ ìš°ë¦¬ê°€ ì…ë ¥í•  valê°’ì´ ê°™ìœ¼ë©´ íŒ¨ìŠ¤ì›Œë“œë¥¼ ì¶œë ¥í•´ì£¼ëŠ” ë“¯ í•˜ë‹¤.
+
+ê·¸ëŸ¼ patì˜ ê°’ë§Œ ì•Œì•„ë‚´ë©´ ë¬¸ì œë¥¼ í’€ ìˆ˜ ìˆìœ¼ë‹ˆ ì •ê·œì‹ì„ í•´ì„í•´ë´ì•¼ê² ë‹¤.
+
+
+
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_11.PNG)
+
+
+ìœ„ì˜ í‘œë¥¼ ì´ìš©í•´ì„œ í•´ì„ì„ í•´ë³´ì•˜ë‹¤.
+
+_ëŠ” ë¬¸ì ê·¸ëŒ€ë¡œ _ì´ê³  \tpëŠ” í˜¼ë™í–ˆì—ˆëŠ”ë° í•˜ë‚˜ê°€ ì•„ë‹ˆë¼ \tì™€ ë¬¸ìpì¸ë“¯ í•˜ë‹¤.
+
+íƒ­ì€ %09ë¡œ ì ì–´ì£¼ì—ˆë‹¤.
+
+ì´ë ‡ê²Œ í•´ì„œ 1aaaaa_.219.251.3.64.%09p%09a%09s%09së¼ëŠ” ê°’ì´ ë‚˜ì™”ë‹¤.
+
+ì´ ê°’ì„ valë³€ìˆ˜ì— ì…ë ¥í•´ì£¼ì—ˆë”ë‹ˆ ë¬¸ì œê°€ í’€ë¦¬ëŠ” ê²ƒì„ ë³¼ ìˆ˜ê°€ ìˆì—ˆë‹¤.
+
+
+![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_12.PNG)
+
