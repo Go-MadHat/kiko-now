@@ -9,8 +9,10 @@ tags:
   - Vertex
 ---
 
-![](https://cnu365-my.sharepoint.com/personal/201802173_o_cnu_ac_kr/Documents/%EC%82%AC%EC%A7%84/Music_Player_2018-07-31_20-47-00.png)
+![](https://lh3.googleusercontent.com/-Mt00QAWaO-k/W2B3xJuz2oI/AAAAAAAABPA/EuQssWCqiIoS-kW0ZX7LwJltNjWTZJnvwCHMYCw/s0/Music_Player_2018-07-31_23-52-45.png)
 
+
+<!--more-->
 
 ```
 
