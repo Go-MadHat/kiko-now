@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'baby-re writeup'
+title: "baby-re writeup"
 tags:
  - Write-up
  - smlsml
