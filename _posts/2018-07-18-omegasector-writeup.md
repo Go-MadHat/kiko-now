@@ -2,6 +2,7 @@
 layout: post
 title: ! "[MeePwn2018] OMEGASECTOR Write up"
 excerpt_separator: <!--more-->
+comments : true
 tags:
   - Write-up
   - CTF
