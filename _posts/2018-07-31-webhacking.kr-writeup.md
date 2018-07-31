@@ -30,7 +30,7 @@ webhacking.kr에 있는 23번과 11번 문제를 풀어보았다.
 ![]({{ site.baseurl }}/images/rlawogns/2018-07-31-webhacking.kr-writeup/webhacking.kr-writeup_01.PNG)
 
 
-문제를 보니 <script>alert(1);</script>를 넣는게 미션이라고 알려준다.
+문제를 보니 `<script>alert(1);</script>`를 넣는게 미션이라고 알려준다.
 
 일단은 넣으라는대로 넣고 제출을 해보았다.
 
