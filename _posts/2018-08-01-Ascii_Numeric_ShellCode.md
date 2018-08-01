@@ -59,7 +59,7 @@ Online Assembler로 간단하게 Disassemble하면 위와 같은 Assembly 코드
 d:  89 e3                   mov    ebx,esp
 ```
 
-다시 코드를 쭈~~~~욱 보면 아래 코드를 통해 스택에 궁극적으로 "/bin//sh"의 포인터를 ebx 레지스터에 넣습니다.
+다시 코드를 쭈~욱 보면 아래 코드를 통해 스택에 궁극적으로 "/bin//sh"의 포인터를 ebx 레지스터에 넣습니다.
 
 ```
 f:  50                      push   eax
@@ -107,7 +107,7 @@ f:  50                      push   eax
 
 현재의 hex 값에는 Ascii 코드로 표현하지 못하는 hex 값이 존재합니다! 즉, Ascii table에 없는 hex 값이라 printable하지 못하다는 것이겠죠?
 
-![]({{ site.baseurl }}/images/t4ngo/Ascii_Numeric_ShellCode/Ascii_Numeric_ShellCode_01.png)  
+![]({{ site.baseurl }}/images/t4ngo/Ascii-Numeric-ShellCode/Ascii_Numeric_ShellCode_01.png)
 
 출력 가능한 Ascii table의 범위는 0x20 ~ 0x7F까지입니다. 즉, 이 범위 안에 해당하는 hex 값들만 Ascii-Numeric-ShellCode로 사용이 가능하다는 뜻이겠죠?
 
