@@ -107,7 +107,7 @@ f:  50                      push   eax
 
 현재의 hex 값에는 Ascii 코드로 표현하지 못하는 hex 값이 존재합니다! 즉, Ascii table에 없는 hex 값이라 printable하지 못하다는 것이겠죠?
 
-![]({{ site.baseurl }}/images/t4ngo/Ascii_Numeric_ShellCode/Ascii_Numeric_ShellCode_01.PNG)  
+![]({{ site.baseurl }}/images/t4ngo/Ascii_Numeric_ShellCode/Ascii_Numeric_ShellCode_01.png)  
 
 출력 가능한 Ascii table의 범위는 0x20 ~ 0x7F까지입니다. 즉, 이 범위 안에 해당하는 hex 값들만 Ascii-Numeric-ShellCode로 사용이 가능하다는 뜻이겠죠?
 
