@@ -109,6 +109,7 @@ f:  50                      push   eax
 
 ![]({{ site.baseurl }}/images/t4ngo/Ascii-Numeric-ShellCode/Ascii_Numeric_ShellCode_01.PNG)
 
+
 출력 가능한 Ascii table의 범위는 0x20 ~ 0x7F까지입니다. 즉, 이 범위 안에 해당하는 hex 값들만 Ascii-Numeric-ShellCode로 사용이 가능하다는 뜻이겠죠?
 
 그렇다면, 여러분은 현재의 32-bit ShellCode에서 Ascii의 범위를 벗어난 hex들을 찾으셨나요?
