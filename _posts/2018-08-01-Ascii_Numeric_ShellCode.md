@@ -107,7 +107,7 @@ f:  50                      push   eax
 
 현재의 hex 값에는 Ascii 코드로 표현하지 못하는 hex 값이 존재합니다! 즉, Ascii table에 없는 hex 값이라 printable하지 못하다는 것이겠죠?
 
-![]({{site.baseurl}}/images/t4ngo/Ascii-Numeric-ShellCode/Ascii_Numeric_ShellCode_01.PNG)
+![]({{ site.baseurl }}/images/t4ngo/Ascii-Numeric-ShellCode/Ascii_Numeric_ShellCode_01.PNG)
 
 출력 가능한 Ascii table의 범위는 0x20 ~ 0x7F까지입니다. 즉, 이 범위 안에 해당하는 hex 값들만 Ascii-Numeric-ShellCode로 사용이 가능하다는 뜻이겠죠?
 
@@ -196,4 +196,4 @@ ecx 레지스터에 0xFFFF 값이 들어있다면 이 값을 활용하여 `'xor 
 
 Ascii-Numeric-ShellCode를 만드는 것이 이렇게 해서 이렇게 하면 이렇게 돼! 하고 딱 정의 되어 있지 않고 그때그때 스택의 상황이나 레지스터의 상황을 보며 자신에게 가장 알맞는 코드를 선택하여 쉘 코딩해주면 되기 때문에 대략 이런 원리로 Ascii-Numeric-ShellCode가 만들어 진다는 점만 기억해주시면 될 것 같습니다!
 
-이제 여러분의 레지스터나 스택 상황에 맞게 창의성을 발휘하여 Ascii-Numeric-ShellCode를 만들어 보세요~~!!! 화이팅!
+이제 여러분의 레지스터나 스택 상황에 맞게 창의성을 발휘하여 Ascii-Numeric-ShellCode를 만들어 보세요~!!! 화이팅!
