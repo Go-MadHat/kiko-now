@@ -14,9 +14,10 @@ tags :
 
 문제를 풀고 이해하기에 필요한 정도로 설명하면 다음과 같다. 
 
+###
 <!--more--!>
 
-### **RSA **
+### RSA 
 
 - 공개키 암호 시스템으로 공개키와 개인키를 사용
 
@@ -35,7 +36,7 @@ tags :
 
 
 
-### **중국인의 나머지정리 (CRT : Chinese Remainder Theorem)**
+### 중국인의 나머지정리 (CRT : Chinese Remainder Theorem)
 
 - 서로소인 자연수들에 대한 연립합동식의 유일한 해를 찾는 정리
 - 정의 및 계산 방법은 다음과 같다. 
@@ -52,13 +53,13 @@ k개의 서로소들 ![n_{1},n_{2},\cdots ,n_{k}](https://wikimedia.org/api/rest
 
 각 ![n_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/57f87f905ba5a4d8c691ccaecd65fc47bd007ba4)에 대해서 ![n/n_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/7d467fe8024d7300d90da9fb58e0a50b9de05206) 와 ![n_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/57f87f905ba5a4d8c691ccaecd65fc47bd007ba4)는 서로소 이므로, ![r_{i}n_{i}+s_{i}(n/n_{i})=1](https://wikimedia.org/api/rest_v1/media/math/render/svg/b93e9306e3ab7b5a80f04406eb556c9855d0ee8e)인 정수 ![r_{i},s_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/16f2656c1f5376f2fd30231a86f41daafe065efa)가 항상 존재한다.  
 
-​																	∵ 확장 유클리드호제법
+															∵ 확장 유클리드호제법
 
 **ei = si(n / ni)** 라고 하면 다음이 성립한다. 
 
-​	 **ei ≡ 0  (mod ni)** 
+	 **ei ≡ 0  (mod ni)** 
 
-​	 **ei ≡ 1  (mod nj)    (i** **≠** **j)**
+	 **ei ≡ 1  (mod nj)    (i** **≠** **j)**
 
 여기서 ![a=\sum _{i}a_{i}e_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2a8ed7901b36b3b88be06f9099bd6fbad63fd102) 라 하면   **a** **≡ ai  (mod ni)  ∀ i = 1, 2, ... ,k**  이 성립하고 여기서 **a** 가 해가 된다.   
 
