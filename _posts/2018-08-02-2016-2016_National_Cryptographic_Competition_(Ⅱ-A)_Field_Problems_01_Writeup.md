@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ! "2016 국가암호공모전 (Ⅱ-A) 분야 문제 01 문제 풀이"
+excerpt_separator: <!--more-->
 tags :
   - Write-up
   - GaeKo
@@ -11,8 +12,6 @@ tags :
 이 문제를 풀기 전에 RSA와 중국인의 나머지 정리에 대해 공부하였다.
 
 문제를 풀고 이해하기에 필요한 정도로 설명하면 다음과 같다. 
-
-<!--more-->
 
 
 ## RSA 
