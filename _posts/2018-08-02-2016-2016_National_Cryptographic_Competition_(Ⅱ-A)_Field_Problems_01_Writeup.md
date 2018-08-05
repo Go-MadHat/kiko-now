@@ -14,7 +14,11 @@ tags :
 문제를 풀고 이해하기에 필요한 정도로 설명하면 다음과 같다. 
 
 
+
 <!--more-->
+
+
+
 
 ## RSA 
 
@@ -40,19 +44,19 @@ tags :
 - 서로소인 자연수들에 대한 연립합동식의 유일한 해를 찾는 정리
 - 정의 및 계산 방법은 다음과 같다. 
 
-k개의 서로소들 ![n_{1},n_{2},\cdots ,n_{k}](https://wikimedia.org/api/rest_v1/media/math/render/svg/bf54ee87d8415bd619a3b1db01091f92a9b9f445) 와 임의의 정수 a1, a2, ... , ak가 있을 때, 임의의 i (1 ≤ i ≤ k)에 대해 
+k개의 <u>서로소들</u> **n1, n2, ... , nk**와 임의의 정수 **a1, a2, ... , ak**가 있을 때, 임의의 **i (1 ≤ i ≤ k)**에 대해 
 
 ​	 **x ≡ ai  (mod ni)** 
 
-로 표현되는 변수 x의 연립합동방정식에 대해 성립하는 해는 유일하게 존재한다. 
+로 표현되는 변수 **x**의 연립합동방정식에 대해 성립하는 해는 유일하게 존재한다. 
 
    그럼 그 해를 어떻게 구할까??
 
-서로소인 음이 아닌 정수 ![n_{1},n_{2},\cdots ,n_{k}](https://wikimedia.org/api/rest_v1/media/math/render/svg/bf54ee87d8415bd619a3b1db01091f92a9b9f445) 에 대해서 ![{\mathfrak  n}=\prod _{{i=1}}^{k}{\mathfrak  n}_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/20d7840029fac56e1bfdaefdd071bfcec9423d80) 라 하자. 
+서로소인 음이 아닌 정수 **n1, n2, ... , nk**에 대해서 **n = n1 × n2 × ... × nk** 라 하자. 
 
-각 ![n_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/57f87f905ba5a4d8c691ccaecd65fc47bd007ba4)에 대해서 ![n/n_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/7d467fe8024d7300d90da9fb58e0a50b9de05206) 와 ![n_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/57f87f905ba5a4d8c691ccaecd65fc47bd007ba4)는 서로소 이므로, ![r_{i}n_{i}+s_{i}(n/n_{i})=1](https://wikimedia.org/api/rest_v1/media/math/render/svg/b93e9306e3ab7b5a80f04406eb556c9855d0ee8e)인 정수 ![r_{i},s_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/16f2656c1f5376f2fd30231a86f41daafe065efa)가 항상 존재한다.  
+각 **ni**에 대해서 **n/ni** 와 **ni**는 서로소 이므로, **rini + si( n/ni) = 1**인 정수 **ri**와 **si**가 항상 존재한다.  
 
-​																	∵ 확장 유클리드호제법
+​		 															∵ 확장 유클리드호제법
 
 **ei = si(n / ni)** 라고 하면 다음이 성립한다. 
 
@@ -60,11 +64,11 @@ k개의 서로소들 ![n_{1},n_{2},\cdots ,n_{k}](https://wikimedia.org/api/rest
 
 ​	 **ei ≡ 1  (mod nj)    (i** **≠** **j)**
 
-여기서 ![a=\sum _{i}a_{i}e_{i}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2a8ed7901b36b3b88be06f9099bd6fbad63fd102) 라 하면   **a** **≡ ai  (mod ni)  ∀ i = 1, 2, ... ,k**  이 성립하고 여기서 **a** 가 해가 된다.   
+여기서 **a = ∑aiei** 라 하면   **a** **≡ ai  (mod ni)  ∀ i = 1, 2, ... ,k**  이 성립하고 여기서 **a** 가 해가 된다.   
 
 
 
-## 문제와 문제 풀이 
+## 문제 와 문제 풀이 
 
 #### **[ 문제 ]** 
 
@@ -218,4 +222,4 @@ m은 위 수의 세제곱근이다.
 1. 위 풀이를 A라고 하면 뭔가 너무 단순하고 코드를 짜서 계산하기에 숫자크기가 너무 커서 직접 확장 유클리드 알고리즘을 만들어 푸는 문제가 아닐거라 생각하고 다른 방법을 찾을라고 삽질하였다.ㅠㅠ
 2. 확장 유클리드 알고리즘을 직접 코드 짜서 돌리는데 계속 오류가 났다 ㅠㅠ 바보였다 ㅠㅠ 그냥 남들이 올린 코드 바로 사용할 걸 그랬다.
 
-중국인의 나머지정리를 공부하는 데에 참고한 사이트 : http://blog.myungwoo.kr/55 
+# 중국인의 나머지정리를 공부하는 데에 참고한 사이트 : http://blog.myungwoo.kr/55 
