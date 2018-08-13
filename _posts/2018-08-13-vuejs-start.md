@@ -22,9 +22,7 @@ tags:
 매우매우 많은 사람들이 뷰는 쉽다, 입문하기 좋다 등등 호평을 하고 있더라구요!  
 이렇게 한국어로된 공식 사이트도 있고요!  
 
-```
 [vue.js공식한글사이트](https://kr.vuejs.org/v2/guide/#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)  
-```
 
 그래서 용감하게 도전하였으나... 읭?!  
 웹좀해봤으면 진짜 간단하게 쭉쭉 짤수잇을 것 같더라구요!! but, 나는 아니라구 ㅠㅠ
@@ -79,10 +77,10 @@ unpkg를 통해서 CDN주소를 제공하므로 다음 주소 HTML페이지에 �
 ## 온라인 컴파일러 사용하기
 
 온라인 컴파일러들이 많이 존재하는데, jsbin, jsfiddle 등이 있습니다!
-```
+
 - [jsbin](https://jsbin.com/?html,js,output)  
 - [jsfiddle](https://jsfiddle.net/boilerplate/vue)  
-```
+
 온라인 컴파일러로 간단히 사용해보면 확실히 간단하게 구현됩니다!! 그런데 어떤 기능이 있는지 몰라서 잘 못씀 ㅠ 레퍼런스가 많긴한데, 내가 원하는 것을 찾기 매우 어려웠어요 ㅠ    
 개발을 시작하고 나서 일단 주먹구구 식으로 노가다 하기 시작!  
 일단 온라인 컴파일러 안녕~  
@@ -147,7 +145,9 @@ main.js : 전역설정을 하는 곳, 프로젝트의 base파일
 components에 page1파일을 추가했다고 가정하면, 웹에서 `http://localhost:8080/page1`로 접근할 수 있습니다.  
 <br>
 프로젝트 설정할때를 보면 라우터를 설정하였습니다. 저는 라우터를 사용안하였으나, 라우터에 관한 내용은 이 블로그에서 잘 설명해 주고있으니, 참고하면 좋을 것 같습니다.  
-[vue-router살펴보기](http://blog.jeonghwan.net/2018/04/07/vue-router.html)  
+
+[vue-router살펴보기](http://blog.jeonghwan.net/2018/04/07/vue-router.html) 
+
 <br>
 또, vue에서는 bootstrap처럼 UI레이아웃을 제공하는 vuetify, bootstrap vue등이 있어요!!  
 
@@ -167,6 +167,5 @@ Vue.use(Vuetify);
 
 자세한 내용은 홈페이지에서 참고 가능합니다!  
 
-```  
 [vuetify 홈페이지](https://vuetifyjs.com/ko/getting-started/quick-start)  
-```
+
