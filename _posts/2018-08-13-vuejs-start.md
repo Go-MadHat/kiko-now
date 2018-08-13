@@ -152,6 +152,7 @@ components에 page1파일을 추가했다고 가정하면, 웹에서 `http://loc
 또, vue에서는 bootstrap처럼 UI레이아웃을 제공하는 vuetify, bootstrap vue등이 있어요!!  
 
 - vuetify 설치  
+
 cmd창에서 다음과 같이 설치하고!  
 
 ```
