@@ -12,7 +12,7 @@ tags:
 
 ---
 
-안녕하세용 `chaem`이에요!  
+안녕하세용  
 웹 프론트엔드계에서 뜨거운 vue.js, react.js, angular.js에 대해 알아보았습니당  
 사실은 `vue.js`에 대해서 주로 말할거에요! ㅎㅎ
 
@@ -21,10 +21,16 @@ tags:
 일단 뷰는 프론트엔트계에서 혜성같이 떠오른 자바스크립트 프레임워크라고 할 수 있습니다  
 매우매우 많은 사람들이 뷰는 쉽다, 입문하기 좋다 등등 호평을 하고 있더라구요!  
 이렇게 한국어로된 공식 사이트도 있고요!  
+
+```
 [vue.js공식한글사이트](https://kr.vuejs.org/v2/guide/#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)  
+```
+
 그래서 용감하게 도전하였으나... 읭?!  
 웹좀해봤으면 진짜 간단하게 쭉쭉 짤수잇을 것 같더라구요!! but, 나는 아니라구 ㅠㅠ
 우선, 처음에 vue.js, react.js, angular.js 중에 뭘 사용해볼까 좀 찾아봤었습니다.  
+
+---
 
 ## vue.js
 - 매우작고 가벼우며, 복잡도가 낮음
@@ -54,6 +60,8 @@ UI 를 구현할 때, 앵귤러만의 문법이 다양하게 존재한다. 특�
 
 끗!  
 
+---
+
 사실 vue.js에 치우쳐 조사하긴 했습니다 ㅎㅎ 그치만 조사하고 나니, vue.js가 확실히 직관적이고 필요로하는 사전지식도 적고, 이식성이 좋다고 생각되었어요!!  
 
 그렇다면 vue.js 사용 과정을 보도록 하겠습니다 ㅎㅎ  
@@ -69,14 +77,18 @@ unpkg를 통해서 CDN주소를 제공하므로 다음 주소 HTML페이지에 �
 -> 새로운 프로젝트를 적용할때는 이 방식이 더 유용
 
 ## 온라인 컴파일러 사용하기
-- 온라인 컴파일러들이 많이 존재하는데, jsbin, jsfiddle 등이 있습니다!
-[jsbin](https://jsbin.com/?html,js,output)  
-[jsfiddle](https://jsfiddle.net/boilerplate/vue)  
+
+온라인 컴파일러들이 많이 존재하는데, jsbin, jsfiddle 등이 있습니다!
+```
+- [jsbin](https://jsbin.com/?html,js,output)  
+- [jsfiddle](https://jsfiddle.net/boilerplate/vue)  
+```
 온라인 컴파일러로 간단히 사용해보면 확실히 간단하게 구현됩니다!! 그런데 어떤 기능이 있는지 몰라서 잘 못씀 ㅠ 레퍼런스가 많긴한데, 내가 원하는 것을 찾기 매우 어려웠어요 ㅠ    
 개발을 시작하고 나서 일단 주먹구구 식으로 노가다 하기 시작!  
 일단 온라인 컴파일러 안녕~  
 
 ## vue-cli사용하기
+
 vue-cli를 셋팅해서 본격적으로 vue를 해보도록하겠습니다.  
 vue-cli의 셋팅 방법은 생각보다 간단했습니다!!!
 처음에 당연히 ubuntu server에서 하려다가 window에서도 간단하게 사용할 수 있어서 window cmd창을 켰다ㅎㅎ  
@@ -84,26 +96,31 @@ vue-cli의 셋팅 방법은 생각보다 간단했습니다!!!
 우선, vue-cli는 npm을 이용하기 때문에 npm과 nodejs를 설치해 줘야합니다  
 
 - npm과 nodejs가 설치되어있다면 버전확인!  
+
 ```
 node -v
 npm -v
 ```
 
 - 설치 안되어있으면 설치!!  
+
 ```
 apt install nodejs-legacy
 sudo npm install -g npm //npm 패키지 설치
 ```
 
 - vue-cli 설치하기  
+
 ```
 sudo npm install -g vue-cli //vue-cli 설치
 ```
 
 - vue 프로젝트 생성하기  
+
 ```
 vue init webpack 프로젝트명 //프로젝트를 생성하고 webpack이라는 템플릿 사용
 ```
+
 ![]({{ site.baseurl }}/images/chaem/vue/vue_01.PNG)
 
 - 프로젝트 실행하기  
@@ -136,9 +153,11 @@ components에 page1파일을 추가했다고 가정하면, 웹에서 `http://loc
 
 - vuetify 설치  
 cmd창에서 다음과 같이 설치하고!  
+
 ```
 npm install vuetify --save
 ```
+
 main.js파일에 다음 코드를 설치해주면 vuetify에 있는 것을 사용할 수 있습니다!!!
 
 ```js  
@@ -147,4 +166,7 @@ Vue.use(Vuetify);
 ```  
 
 자세한 내용은 홈페이지에서 참고 가능합니다!  
+
+```  
 [vuetify 홈페이지](https://vuetifyjs.com/ko/getting-started/quick-start)  
+```
