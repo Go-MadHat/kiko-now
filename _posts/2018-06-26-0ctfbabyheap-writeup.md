@@ -267,7 +267,7 @@ pwndbg> x/10gx 0x555555757000
 chunk의 값을 확인해보면, 두번째 fastbin의 주소인 0x555555757030에 overflow된 값들이 들어가면서 값이 변경된 것을 알 수 있습니다. 이를 통해 overflow를 통해 다음 heap영역의 값을 변경시킬 수 있다는 사실을 알 수 있었습니다. 하지만 여기서 크기를 조작하여 그 수만큼 받을 수 있다하더라도 dump를 통해서 출력할 수 있는 것 역시 48바이트 뿐입니다. 따라서 leak을 하기 위한 값을 읽어오기 위해서는 같은 크기의 fastbin만을 이용해서는 안되고 smallbin을 하나 이용해야 합니다.  
 다음은 leak하는 과정을 정리한 것입니다.  
 
-#### 1. 따라서 4개의 fastbin과 1개의 smallbin 할당합니다. (index 0~4)  
+#### 1. 4개의 fastbin과 1개의 smallbin 할당합니다. (index 0~4)  
 
 ```  
 pwndbg> heap
@@ -324,7 +324,8 @@ Last Remainder: 0
 }
 ```  
 
-#### 2. 1번과 2번 chunk를 free합니다. : free한 2번 chunk의 fd에 이전 1번 chunk의 주소가 들어있는 것을 볼 수 있습니다.  
+#### 2. 1번과 2번 chunk를 free합니다.
+free한 2번 chunk의 fd에 이전 1번 chunk의 주소가 들어있는 것을 볼 수 있습니다.  
 
 ```  
 pwndbg> heap
@@ -381,7 +382,8 @@ Last Remainder: 0
 }
 ```  
 
-#### 3. free한 2번 chunk의 fd를 4번 smallbin chunk를 가리키도록 조작합니다 : overflow를 이용해 1byte만 조작해 주면됩니다.  
+#### 3. free한 2번 chunk의 fd를 4번 smallbin chunk를 가리키도록 조작합니다
+overflow를 이용해 1byte만 조작해 주면됩니다.  
  
 ```  
 pwndbg> x/10gx 0x555555757060
@@ -392,11 +394,14 @@ pwndbg> x/10gx 0x555555757060
 0x5555557570a0:	0x0000000000000000	0x0000000000000000
 ```  
 
-#### 4. 2번 chunk에서 overflow를 일으켜 4번 smallbin을 fastbin chunk 크기로 만들어 줍니다. : security check가 이루어질 때 size를 체크하므로 크기를 조작해줘야 합니다!  
+#### 4. 2번 chunk에서 overflow를 일으켜 4번 smallbin을 fastbin chunk 크기로 만들어 줍니다.
+security check가 이루어질 때 size를 체크하므로 크기를 조작해줘야 합니다!  
 
-#### 5. 1번과 2번 chunk를 다시 allocate합니다. : 원래 1번을 가리키던 2번 chunk의 fd가 4번 chunk를 가리키게되고, allocate하면서 4번 chunk랑 병합하게 됩니다!  
+#### 5. 1번과 2번 chunk를 다시 allocate합니다.
+원래 1번을 가리키던 2번 chunk의 fd가 4번 chunk를 가리키게되고, allocate하면서 4번 chunk랑 병합하게 됩니다!  
 
-#### 6. 그리고 4번 chunk의 크기를 다시 smallbin 크기로 만들어주고 free합니다. free하면 smallbin 특성상 unsorted bin이 되기 때문에 fd와 bk에 main_arena+88 주소가 남게 됩니다. 이 점을 이용하면 dump를 통해 main_arena+88의 leak이 가능합니다.  
+#### 6. 4번 chunk의 크기를 다시 smallbin 크기로 만들어주고 free합니다. 
+free하면 smallbin 특성상 unsorted bin이 되기 때문에 fd와 bk에 main_arena+88 주소가 남게 됩니다. 이 점을 이용하면 dump를 통해 main_arena+88의 leak이 가능합니다.  
 
 ```  
 [chaem이랑 짚고가기]
