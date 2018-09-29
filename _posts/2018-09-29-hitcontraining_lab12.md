@@ -23,8 +23,22 @@ https://github.com/scwuaptx/HITCON-Training/tree/master/LAB/lab12
 
 여기는 문제 코드, 바이너리, exploit이 모두 나와있어서 여러가지로 도움이 되었었습니다 ㅎㅎ  
 
-이 문제는 `double free bug`로 chunk의 fd를 조작하여 puts함수로 system함수를 호출하는 문제입니다.  
-우선 바이너리의 보호기법은 다음과 같습니다.  
+이 문제는 fastbin attack인 `double free bug`로 chunk의 fd를 조작하여 puts함수로 system함수를 호출하는 문제입니다.  
+
+우선, 여기에서 말하는 fastbin은 무엇일가요??  
+heap은 할당할 때 top chunk에서 필요한 만큼의 크기를 할당합니다.  
+사용이 끝난 후에 free를 하면, 이 free된 chunk들을 재사용하기 위해 bin구조로 관리를 하게 됩니다.  
+bin구조는 사이즈와 목적에 따라 small bin, large bin, unsorted bin, fastbin으로 나누어지게 되는데요.
+그 중에서 fastbin은 `72바이트 이하의 chunk`을 의미하는 것입니다!
+
+fastbin에 대한 자세한 내용은 아래글에서 공부하시면 더 좋을 것 같아요!  
+
+> [[번역글]힙 오버플로우를 통한 fastbin 컨트롤](https://bpsecblog.wordpress.com/2016/08/31/translate_fastbin/)  
+
+그럼 double free bug는 무엇일까요?  
+`Double Free Bug`는 줄여서 DFB라고도 부릅니다. 그리고 말그대로 free를 2번해서 발생하는 취약점이라고 할 수 있죠!  
+
+우선 문제로 넘어가서 바이너리를 보도록하겠습니다.  
 
 ```
 pwndbg> checksec
