@@ -23,18 +23,20 @@ lock 파일이 있고, flag 파일이 존재하여 lock 파일을 풀 시, 권�
 ## 풀기
 처음 lock 파일을 실행하면...
 ---
-그림
+![]({{ site.baseurl }}/images/Koon/ice/ice_1.PNG)
 ---
 패스워드를 물어보고, 패스워드 입력 시, 그 입력 값에 따라 권한 상승이 일어나거나, 잘못되었다는 메시지를 출력한다.
 
+![]({{ site.baseurl }}/images/Koon/ice/ice_2.PNG)
 바로 본론으로 들어가서... 이문제가 쉬운 이유는, "strcmp"를 쓴다는 것을 바이너리를 분석하면 바로 알게되고, 그에 따라 gdb 또는 ltrace를 사용하여 strcmp 위주로 분석만 하면 답이 바로 나온다.
 
 ### gdb
-
+![]({{ site.baseurl }}/images/Koon/ice/ice_3.PNG)
 
 ### ltrace
+![]({{ site.baseurl }}/images/Koon/ice/ice_4.PNG)
 
-
+![]({{ site.baseurl }}/images/Koon/ice/ice_5.PNG)
 ## 결론
 음... 매우 쉽다.
 왜 200점 짜리 인지는 모르겠다.
