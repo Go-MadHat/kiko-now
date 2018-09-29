@@ -25,7 +25,7 @@ https://github.com/scwuaptx/HITCON-Training/tree/master/LAB/lab12
 
 이 문제는 fastbin attack인 `double free bug`로 chunk의 fd를 조작하여 puts함수로 system함수를 호출하는 문제입니다.  
 
-우선, 여기에서 말하는 fastbin은 무엇일가요??  
+우선, 여기에서 말하는 `fastbin`은 무엇일가요??  
 heap은 할당할 때 top chunk에서 필요한 만큼의 크기를 할당합니다.  
 사용이 끝난 후에 free를 하면, 이 free된 chunk들을 재사용하기 위해 bin구조로 관리를 하게 됩니다.  
 bin구조는 사이즈와 목적에 따라 small bin, large bin, unsorted bin, fastbin으로 나누어지게 되는데요.
