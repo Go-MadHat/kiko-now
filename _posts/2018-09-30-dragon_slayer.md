@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Swamp CTF Dragon's Horde '
+title: ! 'Swamp CTF Dragon '
 excerpt_separator: <!--more-->
 tags:
   - Koon
