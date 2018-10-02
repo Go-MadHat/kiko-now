@@ -45,11 +45,11 @@ eval에서 연산할 때 p->numbers의 배열을 참조하는데, 이때 cnt의 
 
 ![]({{ site.baseurl }}/images/KRater/2018-10-02-pwnable-tw-calc/pic07.PNG)
 
-지금 cnt가 1이죠. 그런데 eval 함수에서 더하기 연산을 하면서 p->numbers[-1] = p->numbers[-1] + p->numbers[0]이 됩니다. p->numbers[-1]은 p->cnt입니다. 그러면 p->cnt가 1이었다가 입력해준 숫자랑 더해지면서 101이 될겁니다. eval에서 마지막에 --p->cnt를 해주면서 다시 입력해 준 숫자가 됩니다. 결국 p->cnt가 매우 커졌을뿐만 아니라, 우리가 원하는 값으로 제어됩니다. 그럼 출력하는 부분을 볼까요?
+지금 cnt가 1이죠. 그런데 eval 함수에서 더하기 연산을 하면서 `p->numbers[-1] = p->numbers[-1] + p->numbers[0]`이 됩니다. p->numbers[-1]은 p->cnt입니다. 그러면 p->cnt가 1이었다가 입력해준 숫자랑 더해지면서 101이 될겁니다. eval에서 마지막에 --p->cnt를 해주면서 다시 입력해 준 숫자가 됩니다. 결국 p->cnt가 매우 커졌을뿐만 아니라, 우리가 원하는 값으로 제어됩니다. 그럼 출력하는 부분을 볼까요?
 
 ![]({{ site.baseurl }}/images/KRater/2018-10-02-pwnable-tw-calc/pic08.PNG)
 
-p->numbers[p->cnt - 1]입니다. 그러면 p->cnt가 우리가 입력한 값이니까 입력한 값-1 의 위치에 있는 정수를 출력할 수 있게됩니다. p->numbers의 0번째부터 canary까지는 356 bytes만큼 떨어져있으니, 입력할 값을 357로 해주면 canary가 출력됩니다.
+p->numbers[p->cnt - 1]입니다. 그러면 p->cnt가 우리가 입력한 값이니까 `입력한 값-1` 의 위치에 있는 정수를 출력할 수 있게됩니다. p->numbers의 0번째부터 canary까지는 `356(*4) bytes` 만큼 떨어져있으니, 입력할 값을 357로 해주면 canary가 출력됩니다.
 
 ![]({{ site.baseurl }}/images/KRater/2018-10-02-pwnable-tw-calc/pic09.PNG)
 
