@@ -2,7 +2,7 @@
 layout: post
 title: ! "[Webhacking.kr] 13"
 categories: [Webhacking.kr]
-excerpt: <!--more-->
+excerpt_separator: <!--more-->
 comments: true
 share: true
 tags:
