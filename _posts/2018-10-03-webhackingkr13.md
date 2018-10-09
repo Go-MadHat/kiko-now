@@ -2,7 +2,7 @@
 layout: post
 title: ! "[Webhacking.kr] 13"
 categories: [Webhacking.kr]
-excerpt: " "
+excerpt: <!--more-->
 comments: true
 share: true
 tags:
@@ -12,6 +12,8 @@ tags:
 ---
 
 webhacking.kr의 최고점(1000) 문제인 13번을 풀어보도록 하겠습니다.
+
+<!--more-->
 
 ![]({{ site.baseurl }}/images/mitny/webhackingkr/13.png)
 
