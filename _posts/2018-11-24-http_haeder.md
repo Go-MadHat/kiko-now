@@ -59,8 +59,8 @@ Status Code: 200 OK
 Remote Address: 175.207.12.40:8080
 Referrer Policy: no-referrer-when-downgrade
 ```
-일반 헤더 (General Header)
-요청 및 응답 메세지 모두에서 사용 가능한 일반 목적의(기본적인) 헤더 항목
+일반 헤더 (General Header)  
+`요청 및 응답 메세지 모두에서 사용 가능한 일반 목적의(기본적인) 헤더 항목`
 
 ```
 >Response Headers
@@ -73,9 +73,8 @@ Keep-Alive: timeout=5, max=100
 Server: Apache/2.4.18 (Ubuntu)
 ```
 
-HTTP 응답 헤더(Response Header)
-
-특정 유형의 HTTP 요청이나 특정 HTTP 헤더를 수신했을때, 이에 응답 함
+HTTP 응답 헤더(Response Header)  
+`특정 유형의 HTTP 요청이나 특정 HTTP 헤더를 수신했을때, 이에 응답 함`
 
 connection : 클라이언트와 서버의 연결 방식 설정(Keep-Alive : 클라이언트와 접속 유지,close : 클라이언트와 접속 중단)
 Content-Type : 헤더 응답 문서의 mime 타입
@@ -100,9 +99,8 @@ Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
 ```
 
-HTTP 요청 헤더(Request Header)
-
-요청 헤더는 HTTP 요청 메세지 내에서만 나타나며 가장 방대함
+HTTP 요청 헤더(Request Header)  
+`요청 헤더는 HTTP 요청 메세지 내에서만 나타나며 가장 방대함`
 
 accept : 클라이언트가 처리하는 미디어 타입 명시 (예 : */*)
 accept-encoding : 클라이언트가 해석할 수 있는 인코딩 방식 지정(예 : gzip, deflate)
