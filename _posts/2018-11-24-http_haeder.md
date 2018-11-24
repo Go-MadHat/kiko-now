@@ -118,7 +118,7 @@ cookie : 웹서버가 클라이언트에 쿠키를 저장한 경우 쿠키 정�
 <Connector port="8080" protocol="HTTP/1.1" server="Server"
 ```
 그리고 다음과 같이 다시 curl을 통하여 확인하여 보면 Apache/2.4.18 (Ubuntu)이 아닌 지정한 Server라는 문자열로 표시된다.
-
+```
 $ curl -i http://192.168.1.100:8080
 HTTP/1.1 200 OK
 Accept-Ranges: bytes
@@ -128,6 +128,7 @@ Content-Type: text/html
 Content-Length: 2457
 Date: Mon, 22 Sep 2014 04:40:20 GMT
 Server: Server
+```
 단, server=""로 할 경우 원래와 같이 Apache/2.4.18 (Ubuntu)가 표시되니 만일 blank 로 표시하고 싶다면 server=" "와 같이 공백을 포함하여 설정한다.
 
 PHP와 Apache의 경우는 아래와 같이 수정하면 정보를 숨길 수 있다.
