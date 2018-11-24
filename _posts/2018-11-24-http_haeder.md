@@ -74,15 +74,15 @@ Server: Apache/2.4.18 (Ubuntu)
 ```
 
 HTTP 응답 헤더(Response Header)  
-`특정 유형의 HTTP 요청이나 특정 HTTP 헤더를 수신했을때, 이에 응답 함`
+`특정 유형의 HTTP 요청이나 특정 HTTP 헤더를 수신했을때, 이에 응답 함`  
 
-connection : 클라이언트와 서버의 연결 방식 설정(Keep-Alive : 클라이언트와 접속 유지,close : 클라이언트와 접속 중단)
-Content-Type : 헤더 응답 문서의 mime 타입
-Content-Length : 요청한 파일의 데이터의 길이
-Last-Modified : 문서가 마지막으로 수정된 일시
-Server :  웹서버 정보
-Date : 현재 일시를 GMT 형식으로 지정
-ETag : 캐시 업데이트 정보를 위한 임의의 식별 숫자
+connection : 클라이언트와 서버의 연결 방식 설정(Keep-Alive : 클라이언트와 접속 유지,close : 클라이언트와 접속 중단)  
+Content-Type : 헤더 응답 문서의 mime 타입  
+Content-Length : 요청한 파일의 데이터의 길이  
+Last-Modified : 문서가 마지막으로 수정된 일시  
+Server :  웹서버 정보  
+Date : 현재 일시를 GMT 형식으로 지정  
+ETag : 캐시 업데이트 정보를 위한 임의의 식별 숫자  
 
 ```
 >Request Headers
@@ -100,16 +100,15 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 ```
 
 HTTP 요청 헤더(Request Header)  
-`요청 헤더는 HTTP 요청 메세지 내에서만 나타나며 가장 방대함`
+`요청 헤더는 HTTP 요청 메세지 내에서만 나타나며 가장 방대함`  
 
-accept : 클라이언트가 처리하는 미디어 타입 명시 (예 : */*)
-accept-encoding : 클라이언트가 해석할 수 있는 인코딩 방식 지정(예 : gzip, deflate)
-accept-language : 클라이언트가 지원하는 언어 지정 (예 : ko)
-user-agent : 클라이언트 프로그램(브라우저) 정보 (예 : Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1))
-host : 호스트 이름과 URI의 port번호 지정 (www.test.com:8080)
-connection : 클라이언트와 서버의 연결 방식 설정(Keep-Alive : 클라이언트와 접속 유지,close : 클라이언트와 접속 중단)
-cookie : 웹서버가 클라이언트에 쿠키를 저장한 경우 쿠키 정보(이름,값)을 웹 서버에 전송
-        (예 : JSESSIONID=CDEI3830DJEJ3K3KD23K39D49)
+accept : 클라이언트가 처리하는 미디어 타입 명시 (예 : */*)  
+accept-encoding : 클라이언트가 해석할 수 있는 인코딩 방식 지정(예 : gzip, deflate)  
+accept-language : 클라이언트가 지원하는 언어 지정 (예 : ko)  
+user-agent : 클라이언트 프로그램(브라우저) 정보 (예 : Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1))  
+host : 호스트 이름과 URI의 port번호 지정 (www.test.com:8080)  
+connection : 클라이언트와 서버의 연결 방식 설정(Keep-Alive : 클라이언트와 접속 유지,close : 클라이언트와 접속 중단)  
+cookie : 웹서버가 클라이언트에 쿠키를 저장한 경우 쿠키 정보(이름,값)을 웹 서버에 전송 (예 : JSESSIONID=CDEI3830DJEJ3K3KD23K39D49)    
 
 # 대응
 
@@ -144,8 +143,7 @@ ServerTokens OS => ServerToekns Prod
 그 후 아파치를 재시작해주면 Server와 X-Powered-By 정보가 숨겨진 걸 확인할 수 있다.
 
 
-
-참고 링크
-https://sarc.io/index.php/tomcat/240-tomcat-response-header-server
-http://www.ktword.co.kr/abbr_view.php?m_temp1=3790
-http://mygumi.tistory.com/92
+참고 링크  
+https://sarc.io/index.php/tomcat/240-tomcat-response-header-server  
+http://www.ktword.co.kr/abbr_view.php?m_temp1=3790  
+http://mygumi.tistory.com/92  
