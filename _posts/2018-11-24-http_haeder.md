@@ -15,7 +15,7 @@ wargame.kr의 첫번째 문제인 already_got 문제에서 나오는 `http heade
 
 <!--more-->
 
-http://wargame.kr/challenge
+[wargame.kr홈페이지](http://wargame.kr/challenge)
 
 ![]({{ site.baseurl }}/images/chaem/wargame.kr/already_got_01.JPG)
 
