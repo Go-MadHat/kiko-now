@@ -221,7 +221,7 @@ FLAG는 마지막 줄에 있습니다. `flag is xmas you are so good at substitu
 
 ### 전체소스
 
-```Python
+```python
 #!/usr/bin/python3
 
 from PIL import Image
