@@ -41,5 +41,5 @@ ni 값에 `or 1`을해줬더니 모든 채팅 기록이 떴다.
 위에서 테이블을 알아냈을 때 있었던`chat_log_secret`이라는 수상한 테이블에서 readme 컬럼의 값들을 불러올 것이다.
 `union select 1,readme,3,4,5 from chat_log_secret --`
 플래그!!
-![]({{ site.baseurl }}/images/mitny/Wargamekr/flag.png)
+![]({{ site.baseurl }}/images/mitny/Wargamekr/chat-flag.png)
 데이터가 많아서 그런지 푸는 데 엄청난 렉이 걸려서 오래걸렸다..
