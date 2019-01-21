@@ -9,8 +9,6 @@ tags:
   - Pwn
   - MyriaBreak
 ---
-# onewrite (pwn)
-
 ### Description
 
 > [wishlish.png](../images/myria/wishlist-writeup/onewrite) is here
