@@ -55,21 +55,21 @@ The attack is summarized as follows.
  7. Jump `ropchain`
  8. Get Shell
 
-The exit function is called after the main function ends. Then, the function `__libc_csu_fini` is called and you can return to main by using the **call QWORD PTR [rbp + rbx * 8 + 0x0]** of `<__ libc_csu_fini+40>`.
+The exit function is called after the main function ends. Then, the function `__libc_csu_fini` is called and you can return to main by using the `call QWORD PTR [rbp + rbx*8+0x0]` of `<__ libc_csu_fini+40>`.
  ![]({{ site.baseurl }}/images/myria/onewrite-writeup/onewrite_03.png)
 
  ![]({{ site.baseurl }}/images/myria/onewrite-writeup/onewrite_01.png)
 
- `6. Write a 'ropchain' in the 'bss'` is hard part. so i need to be able to write 8 bytes somewhere and **jump free** from the main function again.
-You can adjust the `stack` by omitting the function's **prologue** or **epilogue** appropriately.
+ `6. Write a 'ropchain' in the 'bss'` is hard part. so i need to be able to write 8 bytes somewhere and `jump free` from the main function again.
+You can adjust the `stack` by omitting the function's prologue or epilogue appropriately.
  manipulate the return address of the `main function` and manipulate the return address of the `do_leak function`. (`sub rsp, 0x18` ,` add rsp, 0x18` or `sub rsp, 0x8` ,` add rsp, 0x8`)
-Then the `stack` is configured as shown below. Now we got one **free write** via two operations.
+Then the `stack` is configured as shown below. Now we got one ``free write`` via two operations.
 
  ![]({{ site.baseurl }}/images/myria/onewrite-writeup/onewrite_02.png)
 
 The rest is simple. configure ropchain and use `pop rsp; ret`
 
-#### [Korean writeup](https://en.wikipedia.org/wiki/Substitution_cipher)
+#### [Korean writeup](https://xerxes-break.tistory.com/401)
 
 ### The full exploit code
 
