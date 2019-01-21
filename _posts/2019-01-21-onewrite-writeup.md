@@ -69,6 +69,8 @@ Then the `stack` is configured as shown below. Now we got one **free write** via
 
 The rest is simple. configure ropchain and use `pop rsp; ret`
 
+#### [Korean writeup](https://en.wikipedia.org/wiki/Substitution_cipher)
+
 ### The full exploit code
 
  ```python
