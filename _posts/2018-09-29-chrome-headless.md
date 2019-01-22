@@ -6,7 +6,7 @@ comments : true
 tags:
   - chrome
   - headless
-  - ccoma
+  - mingzzi
 ---
 
 하는 일이 일이다보니 크고작은 CTF용 문제를 낼 일이 많다.  

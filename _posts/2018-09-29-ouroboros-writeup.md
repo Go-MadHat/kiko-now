@@ -6,7 +6,7 @@ comments : true
 tags:
   - Write-up
   - Lord of SQL Injection
-  - ccoma
+  - mingzzi
 ---
 
 얼마 전 `LOS`를 올클했다.  

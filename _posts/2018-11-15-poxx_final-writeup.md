@@ -6,7 +6,7 @@ comments : true
 tags:
   - Write-up
   - POXX
-  - ccoma
+  - mingzzi
 ---
 
 이번에 매우 운이 좋게도 `2018 POXX 본선`에 참가할 수 있었다.  
