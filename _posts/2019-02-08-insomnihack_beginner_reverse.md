@@ -27,6 +27,17 @@ IDA로 분석한 결과 beginer_reverse::main::h80fa15281f646bc1() 부분을 발
 ![]({{ site.baseurl }}/images/chaem/insomni_rev/beginner_reverse_01.JPG)  
 
 그리고 do ~ while문을 통해 다음과 같은 연산을 반복하여 일치하는 값을 찾는 것을 알 수 있다.  
+```
+ do
+  {
+    if ( v16 == v24 )
+      break;
+    v2 = ((*(_DWORD *)(v33 + 4 * v25) >> 2) ^ 0xA) == *(_DWORD *)(v16 + 4 * v25);
+    ++v25;
+    v26 += v2;
+    v24 -= 4LL;
+  }
+```
 
 ![]({{ site.baseurl }}/images/chaem/insomni_rev/beginner_reverse_02.JPG)  
 
