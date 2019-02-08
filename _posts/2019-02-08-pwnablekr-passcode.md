@@ -75,7 +75,7 @@ int main(){
 3. login()
   main과 welcome 함수에선 특별한 내용이 없는걸로 미루어 login함수에서 어떠한 문제(?)가 발생하리라 생각된다.~~그리고 제일 길다.~~
   
-###login()
+### login()
   이 함수에서는 `int passcode1`과 `int passcode2`가 선언되어 있으며
   ```c
   if(passcode1==338150 && passcode2==13371337){
@@ -195,7 +195,7 @@ End of assembler dump.
   [ebp-0x70] - [ebp-10] = 0x60...즉, 96byte가 됩니다!
   name 배열이 100byte였던것을 미루어 보아 4byte만큼 임의의 값을 작성할 수 있다!
 
-  ![]({{ site.baseurl }}/images/nalda/passcode/passcode_1.PNG)
+  ![]({{ site.baseurl }}/images/nalda/passcode/passcode_1.png)
   
   시나리오를 써보려 했을 때,
 
