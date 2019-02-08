@@ -18,7 +18,7 @@ tags:
 
 올 해 insomni'hack CTF는 대회 당일 일정으로 인해 참가를 하지 못하고 조금 미루다 이제서야 풀어보게 되었다.
 먼저, 파일을 다운받아 file 명령어로 확인 한 결과 64bit ELF파일임을 확인할 수 있다.
-![]({{ site.baseurl }}/images/nalda/Insomni/beginner_1.png)
+![]({{ site.baseurl }}/images/nalda/junkyard/1.png)
 파일을 실행 해 보면
 
 ```
@@ -34,7 +34,7 @@ I don't like your name
 ```
 이따구로 name이 맘에 안든단다..
 
-description을 보면, `73FF9B24EF8DE48C346D93FADCEE01151B0A1644BC81` 과i correct password로 로그인 하라는걸 보아 name은 나온것 같다
+description을 보면, `73FF9B24EF8DE48C346D93FADCEE01151B0A1644BC81` 과 correct password로 로그인 하라는걸 보아 name은 나온것 같다
 
 ```
 nalda@nalda:~$ ./junkyard 73FF9B24EF8DE48C346D93FADCEE01151B0A1644BC81 44234324324234
