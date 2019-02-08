@@ -1,12 +1,11 @@
 ---
 layout: post
-title: ! '35C3_CTF_Corebot'
+title: ! 'Frida_Android_Hooking'
 excerpt_separator: <!--more-->
 tags:
   - Koon
   - Frida
-  - Tool
-  - crack
+  - Hooking
 ---
 
 Android 에서의 Frida 사용에 대해 얘기합니다.
