@@ -101,7 +101,7 @@ int main(){
   scanf("%d", passcode2);
   ```
   scanf가 요상하다 ^0^
-  우리가 흔히 아는 scanf 사용법은 `scanf("%d", &passcode1)` 이런식으로 ---&---가 들어가 있어야 한다.
+  우리가 흔히 아는 scanf 사용법은 `scanf("%d", &passcode1)` 이런식으로 ***&***가 들어가 있어야 한다.
   
   이는 변수에 입력받은 값을 저장하는게 아닌, 변수명 자체가 주소로 인식되어 `Segmentation fault`가 발생하게 된당
 
