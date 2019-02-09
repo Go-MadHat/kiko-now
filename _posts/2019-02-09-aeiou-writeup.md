@@ -39,7 +39,7 @@ Raising a Baby
 
 ![]({{ site.baseurl }}/images/myria/aeiou-writeup/aeiou_02.PNG)
 
- 버퍼는 0x1000만큼 할당되어있지만 입력은 0x10000만큼 입력할 수 있습니다. 이는 BOF가 있음을 알려줍니다.
+ 버퍼는 0x1000만큼 할당되어있지만 입력은 0x10000만큼 입력할 수 있다. 이는 BOF가 있음을 알려준다.
 
  ```bash
  [*] '/home/myria/CTF/CODEGATE/aeiou/aeiou'
@@ -49,8 +49,9 @@ Raising a Baby
      NX:       NX enabled
      PIE:      No PIE (0x400000)
  ```
+
  하지만 카나리가 있기 때문에 BOF를 통해 바로 return address를 덮어씌울 방법이 없다.
- 이를 우회하기위해 pthread_create함수가 이용된다. 스레드가 pthread_create함수에 의해 생성될 경우, 스레드의 스택에 `Thread Local Storage(TLS)`를 사용하여 변수를 저장한다. 즉, 스레드의 스택에 `stack_guard`, 즉 카나리값이 존재하기 때문에 이를 덮어씌우면 BOF를 사용하여 RIP를 컨트롤 할 수 있다.
+ 이를 우회하기위해 pthread_create함수가 이용된다. 스레드가 pthread_create함수에 의해 생성될 경우, 스레드의 스택에 `Thread Local Storage(TLS)`를 사용하여 변수를 저장한다. 즉, 스레드의 스택에 `stack_guard`(=카나리값)이 존재하기 때문에 이를 덮어씌우면 BOF를 사용하여 RIP를 컨트롤 할 수 있다.
 
  이제 `ROP기법`을 이용하여 라이브러리 주소를 유출(leak)하고 `원샷가젯 (execve("/bin/sh", rsp+0x30, environ))`을 실행하면 된다.
 
