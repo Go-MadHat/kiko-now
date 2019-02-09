@@ -2,6 +2,7 @@
 layout: post
 title: ! "[Insomni'hack 2019] echoechoechoecho Write-up"
 excerpt_separator: <!--more-->
+comments : true
 tags:
   - KRater
   - insomnihack2019
