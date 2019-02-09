@@ -11,7 +11,7 @@ tags:
 ---
 ### Description
 
-> [File](../images/myria/wishlist-writeup/onewrite) is here
+> [File](../images/myria/onewrite-writeup/onewrite) is here
 > difficulty: easy
 >_  nc onewrite.teaser.insomnihack.ch 1337
 
