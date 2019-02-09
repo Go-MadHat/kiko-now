@@ -12,7 +12,7 @@ tags:
 ### Description
 
 > nc 110.10.147.109 17777
-> [aeiou](../images/myria/wishlist-writeup/onewrite)
+> [aeiou](../images/myria/aeiou-writeup/onewrite)
 
 
 <!--more-->
