@@ -5,8 +5,7 @@ excerpt_separator: <!--more-->
 comments : true
 tags:
   - insomnihack2019
-  - rev
-  - beginner reverse
+  - reversing
   - chaem
 ---
 beginner reverse는 64bit 바이너리의 rust 언어로 된 리버싱 문제이다.  

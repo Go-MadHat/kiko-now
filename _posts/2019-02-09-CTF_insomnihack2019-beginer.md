@@ -1,12 +1,12 @@
 ---
 layout: post
-title: ! "Insomni Beginner"
+title: ! "[Insomni'hack 2019] Beginner"
 excerpt_separator: <!--more-->
 tags:
-  - koon
   - CTF
   - Write-up
-  - reverse
+  - reversing
+  - Koon
 ---
 Insomihack CTF에 나온 Beginer로 적습니다.
 <!--more-->

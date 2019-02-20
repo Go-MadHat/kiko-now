@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 tags:
   - Write-up
   - CTF
-  - Pwn
+  - pwnable
   - MyriaBreak
 ---
 
