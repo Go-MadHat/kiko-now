@@ -4,9 +4,9 @@ title: ! "MIPS 시작하기"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - chaem
   - MIPS
   - RISC
-  - chaem
 ---
   
 오늘은 예전에 내가 잠시 공부했던 mips를 꺼내볼까 합니다  

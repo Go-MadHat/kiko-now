@@ -4,9 +4,9 @@ title: ! "[Lord of SQL Injection] LoS - ouroboros 문제풀이"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - mingzzi
   - Write-up
   - Lord of SQL Injection
-  - mingzzi
 ---
 
 얼마 전 `LOS`를 올클했다.  

@@ -4,10 +4,10 @@ title: ! "[Byte Bandits] Tale of a Twisted Mind Writeup"
 comments: true
 excerpt_separator: <!--more-->
 tags:
+  - MyriaBreak
   - Write-up
   - CTF
   - ByteBanditsCTF2018
-  - MyriaBreak
 ---
 
 Pwn문제를 뭘 풀까 찾다가 2달전에 했던 `Byte Bandits CTF 2018`에서 봤던 문제를 풀어보기로 했다.

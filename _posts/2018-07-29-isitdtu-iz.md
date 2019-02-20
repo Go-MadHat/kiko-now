@@ -3,9 +3,9 @@ layout: post
 title: ISITDTU 2018 Quals IZ
 excerpt_separator: <!--more-->
 tags:
+  - MitNy
   - ISITDTU
   - Write-up
-  - MitNy
 ---
 
 ISITDTU CTF 2018 Quals 100포인트 문제 IZ 풀이입니다.

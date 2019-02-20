@@ -3,9 +3,9 @@ layout: post
 title: Analysis CVEs for iOS Jailbreaking
 excerpt_separator: <!--more-->
 tags:
+  - KRater
   - Analysis
   - iOS
-  - KRater
 ---
 
 안녕하세요, `MadHat`팀에서 `pwnable`을 공부하고 있는 `KRater`입니다. 저는 현재 [iOS 탈옥](https://en.wikipedia.org/wiki/IOS_jailbreaking)에 대한 공부를 진행하고 있는데, 이를 위해서 분석한 CVE 두 가지와, 분석에 필요한 선행지식을 소개 해 드리도록 하겠습니다.

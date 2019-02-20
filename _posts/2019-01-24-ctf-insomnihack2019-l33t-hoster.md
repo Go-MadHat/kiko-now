@@ -4,10 +4,10 @@ title: ! "[Insomni'hack 2019] l33t-hoster Write up(미완성)"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - mingzzi
   - Write-up
   - CTF
   - insomnihack2019
-  - mingzzi
 ---
 
 이번에는 `Insomni'hack teaser`에 출제 된 `l33t-hoster` 문제의 풀이를 적어보려 한다.  

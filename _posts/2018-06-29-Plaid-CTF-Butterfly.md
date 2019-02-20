@@ -1,17 +1,20 @@
 ---
 layout: post
 title: ! '[Plaid CTF] Butterfly write up'
+excerpt_separator: <!--more-->
+comments : true
 tags:
+ - nalda
  - Write-up
  - CTF
  - Plaid CTF
- - nalda
 ---
 
 2016년도 Plaid CTF에서 나온 문제이다. 이 문제로 선정 한 이유는 공부를 시작 한 후 처음 접한 Pwnable 문제로, CTF 당시에는 풀지 못하였고 그동안 잊고 살았다가 최근 다시 생각나서 풀어보게 됐다.
 
 출제 당시 150 point였으며, 바이너리가 제공되었다.
 
+<!--more-->
 
 먼저 checksec을 이용하여 해당 바이너리를 보면 특이사항으로 Stack Canary가 존재하며 64bit 이다.
 ![]({{ site.baseurl }}/images/nalda/Butterfly/checksec.PNG)

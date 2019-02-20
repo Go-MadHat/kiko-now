@@ -4,9 +4,9 @@ title: ! "Chrome Headless 사용법"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - mingzzi
   - chrome
   - headless
-  - mingzzi
 ---
 
 하는 일이 일이다보니 크고작은 CTF용 문제를 낼 일이 많다.  

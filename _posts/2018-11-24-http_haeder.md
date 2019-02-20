@@ -4,11 +4,10 @@ title: ! "[wargame.kr] already_got"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - chaem
   - wargame
   - web
   - already_got
-  - http_header
-  - chaem
 ---
 
 wargame.kr의 첫번째 문제인 already_got 문제에서 나오는 `http header` 대해 공부해보고자 한다.  

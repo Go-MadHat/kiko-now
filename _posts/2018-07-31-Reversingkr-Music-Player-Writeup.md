@@ -4,9 +4,9 @@ title: ! "[Reversing.kr] Music Player"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - Vertex
   - Write-up
   - Reversing.kr
-  - Vertex
 ---
 
 ![](https://lh3.googleusercontent.com/-Mt00QAWaO-k/W2B3xJuz2oI/AAAAAAAABPA/EuQssWCqiIoS-kW0ZX7LwJltNjWTZJnvwCHMYCw/s0/Music_Player_2018-07-31_23-52-45.png)

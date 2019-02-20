@@ -3,10 +3,10 @@ layout: post
 title: ! "[Insomni'hack 2019] Junkyard(미완성)"
 excerpt_separator: <!--more-->
 tags:
+  - nalda
   - CTF
   - Write-up
   - reversing
-  - nalda
 ---
 **Problem description:**
 >Wall-E got stuck in a big pile of sh\*t. To protect him from feeling too bad, its software issued an emergency lock down. Sadly, the software had a conscience and its curiosity caused him to take a glance at the pervasive filth. The filth glanced back, and then...

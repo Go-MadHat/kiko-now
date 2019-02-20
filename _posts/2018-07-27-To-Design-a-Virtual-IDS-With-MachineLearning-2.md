@@ -1,11 +1,11 @@
 ---
 excerpt_separator: <!--more-->
 tags:
+  - Koon
   - Design
   - MachineLearning
   - Virtual
   - IDS
-  - Koon
 ---
 
 안녕하세요. `MadHat`팀의 `Koon`입니다.  

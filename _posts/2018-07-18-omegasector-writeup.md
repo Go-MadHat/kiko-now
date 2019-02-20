@@ -4,10 +4,10 @@ title: ! "[MeePwn2018] OMEGASECTOR Write up"
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - mingzzi
   - Write-up
   - CTF
   - MeePwn2018
-  - mingzzi
 ---
 
 `OMEGASECTOR`는 `MeePwn 2018 CTF`에 출제되었던 문제이다.  

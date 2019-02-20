@@ -4,10 +4,10 @@ title: ! "[MeePwnCTF2018] one_shot Writeup"
 comments: true
 excerpt_separator: <!--more-->
 tags:
+  - MyriaBreak
   - Write-up
   - CTF
   - pwnable
-  - MyriaBreak
 ---
 
 얼마전 있었던 `MeePwnCTF 2018`에서 나왔던 `one_shot`이란 문제이다.

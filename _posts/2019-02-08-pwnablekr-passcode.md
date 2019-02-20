@@ -7,7 +7,6 @@ tags:
   - wargame
   - pwnable.kr
   - pwnable
-  - Toddler's Bottle
 ---
 **Problem description:**
 >Mommy told me to make a passcode based login system.

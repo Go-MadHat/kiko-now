@@ -4,11 +4,11 @@ title: ! "[9447 CTF 2015] Search Engine"
 comments: true
 excerpt_separator: <!--more-->
 tags:
+  - MyriaBreak
   - Write-up
   - CTF
   - pwnable
   - heap
-  - MyriaBreak
 ---
 
 요즘 `Heap` 쪽을 공부하고 있습니다. 그래서 `Shellphish`팀에서 정리해놓은 `how2heap`문서를 보면서 공부를 하고 있는데, 처음부터 굉장히 어려운 문제를 잡은 느낌이 듭니다 ;;

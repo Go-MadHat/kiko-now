@@ -4,10 +4,10 @@ title: ! "[CSAW Quals 2017] BabyCrypt Writeup"
 comments: true
 excerpt_separator: <!--more-->
 tags:
+  - MyriaBreak
   - Write-up
   - CTF
   - Crypto
-  - MyriaBreak
 ---
 
 얼마전에 서울하이유스호스텔에서 있었던 `HackingCamp 18th`에 참여하였었는데요. 그 때 내부 CTF에서 나왔던 `Crypto`문제(Easy CAESC)가 인상깊어서 비슷한 문제가 없을까 하고 찾던 중에 알게된 문제입니다. `CSAW Quals 2017`에서 나왔던 `BabyCrypt`란 문제인데요 ㅎㅎ

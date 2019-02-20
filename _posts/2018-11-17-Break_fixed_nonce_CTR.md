@@ -4,8 +4,8 @@ title: ! "[Crypto] CTR 모드 공격 Break fixed-nonce CTR"
 comments: true
 excerpt_separator: <!--more-->
 tags:
-  - Crypto
   - MyriaBreak
+  - Crypto
 ---
 
 시간이 없어 암호 공부를 얼마간 못하다가 다시 시작하였습니다. 이번에는 CTR모드에 대해, 그리고 `고정된 nonce를 사용하는 CTR모드`를 공격하는 방법에 대해 알아보겠습니다.

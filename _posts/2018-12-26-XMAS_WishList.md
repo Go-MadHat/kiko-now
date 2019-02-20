@@ -4,10 +4,10 @@ title: ! "[2018 X-MAS CTF] Special Christmas Wishlist"
 comments: true
 excerpt_separator: <!--more-->
 tags:
+  - MyriaBreak
   - Write-up
   - CTF
   - Crypto
-  - MyriaBreak
 ---
 
 `X-MAS CTF`에 나온 암호문제중 하나입니다. CTF는 12.14 ~ 12.21에 진행된 CTF로 크리스마스 분위기가 물씬 풍기는 CTF였습니다. (`Christmas` 당일까지 진행하지않은게 정말 다행이네요 ㅎㅎ;; )

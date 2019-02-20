@@ -3,10 +3,10 @@ layout: post
 title: ! "[Insomni'hack 2019] Beginner"
 excerpt_separator: <!--more-->
 tags:
+  - Koon
   - CTF
   - Write-up
   - reversing
-  - Koon
 ---
 Insomihack CTF에 나온 Beginer로 적습니다.
 <!--more-->

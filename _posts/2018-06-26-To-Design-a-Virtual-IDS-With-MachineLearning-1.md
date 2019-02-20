@@ -1,11 +1,11 @@
 ---
 excerpt_separator: <!--more-->
 tags:
+  - Koon
   - Design
   - MachineLearning
   - Virtual
   - IDS
-  - Koon
 ---
 
 안녕하세요. `MadHat`팀의 `Koon`입니다. 저는 3월부터 ~ 5월 말까지 약 2개월 동안 진행한 "가상 IDS 설계" 프로젝트에 대해서 알게된 지식들을 제가 경험한 절차에 맞게 소개하려합니다.

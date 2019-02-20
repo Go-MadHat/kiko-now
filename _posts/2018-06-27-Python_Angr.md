@@ -4,9 +4,9 @@ title: ! "[Python Angr] 신기한 리버싱 꿀툴 Angr를 숙지해두는건 �
 excerpt_separator: <!--more-->
 comments : true
 tags:
+  - Vertex
   - Python 2.7
   - Angr
-  - Vertex
 ---
 
 
