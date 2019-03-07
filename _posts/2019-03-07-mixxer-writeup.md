@@ -73,11 +73,15 @@ And you can safely ignore the rack.session cookie. Like actually. But that other
 ![]({{ site.baseurl }}/images/myria/mixxer-writeup/mixxer_09.PNG)
 
 `Fisrt name`  : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 `Last name`   : b
+
 `user` Cookie : f75f9acf55c0f1efbfedd5509e2cb55fbd3fc0da723d226f5d2dd82478531b24bd3fc0da723d226f5d2dd82478531b245c36e6b0b2e6ef806cad8c1dce32c2f4f72de03131106d5a3f8384d2aadf9d2c
 
 `Fisrt name`  : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 `Last name`   : bb
+
 `user` Cookie : f75f9acf55c0f1efbfedd5509e2cb55fbd3fc0da723d226f5d2dd82478531b24bd3fc0da723d226f5d2dd82478531b245c36e6b0b2e6ef806cad8c1dce32c2f4543f1ee77054c119fdfa2343152015ece379f6cd6b130380dd363f9d48a409ea
 
 위 입력을 인자로 주었을 때, 두 쿠키값이 비슷함을 볼 수 있다. 즉, 이 쿠키값은 적어도 해시값이 아닌 일정한 암호화과정이 있다는 것이다. 또한 `Last name`의 길이가 1늘어남에 따라 `user`의 길이는 32만큼 증가하였다.
