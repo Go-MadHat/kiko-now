@@ -16,7 +16,7 @@ Android Application 분석을 위한 환경구축
 Android APK 분석을 위한 환경 구축이다.
 기본적인 java설치와 jdk등은 각자 알아서 설치하지^0^
 
-###APK추출
+### APK추출
 
 
 정적분석을 하기 전 가장 중요한건 대상 APK를 추출하는 것이다.
@@ -42,11 +42,11 @@ apk추출은 많은 방법이 있는데, [playstore](https://play.google.com/sto
 이렇게 APK추출은 끝이났다!
 
 
-###정적분석
+### 정적분석
 예전(이래봐야 2년전)에 apk를 분석할땐 dex2jar, apktools등을 이용해서 했는데(아마도 내가 몰라서 그랬던거겠지만..)
 요즘에는 Java Decompiler가 짱짱 좋아서 APK파일을 넣으면 짜쟌 하고 나온당
 
-Link: [jadx]( https://github.com/skylot/jadx/releases/download/v0.6.1/jadx-0.6.1.zip , "JADX 링크")
+[jadx]( https://github.com/skylot/jadx/releases/download/v0.6.1/jadx-0.6.1.zip , "JADX 링크")
 
 ![]({{ site.baseurl }}/images/nalda/Android/04.PNG)
 
