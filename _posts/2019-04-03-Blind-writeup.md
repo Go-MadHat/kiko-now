@@ -25,7 +25,6 @@ nc blind.q.2019.volgactf.ru 7070
 주어진 파이썬 스크립트는 아래와 같습니다.
 
 ```python
-<pre class="brush: python; title: ; notranslate" title="">
 #!/usr/bin/env python
 from __future__ import print_function
 import os
