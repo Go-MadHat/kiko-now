@@ -269,17 +269,17 @@ elif cmd == 'sign':
 공격법으로는 RSA 암호의 특징을 이해하고, mod 연산의 특성을 알면 쉽게 생각해낼 수 있는 방법이 있습니다. 이에 대한 증명은 위키피디아 등에 찾아보면 아주 자세히 증명해놓았기 때문에 여기서 설명하진 않겠습니다.
 
 * 먼저 서명할 메세지(m / "cat flag")를 정수로 변환하여 약수를 구합니다.
-1. m = 2 * 3 * ....
+ 1. m = 2 * 3 * ....
 * 구한 약수 중 하나(r)를 임의로 선택합니다.
-2. r = 2
+ 2. r = 2
 * m/r을 서명합니다.
-3. S1 = (m/r)^d mod N
+ 3. S1 = (m/r)^d mod N
 * r을 서명합니다.
-4. S2 = (r)^d mod N
+ 4. S2 = (r)^d mod N
 * S1과 S2를 곱합니다.
-5. S1 * S2 = (r)^d mod N  *  (m/r)^d mod N = (m)^d mod N = S'
+ 5. S1 * S2 = (r)^d mod N  *  (m/r)^d mod N = (m)^d mod N = S'
 * S'를 서명으로 하여 m을 전송합니다.
-6. S'^e mod N = m^ed mod N = m
+ 6. S'^e mod N = m^ed mod N = m
 
 위와 같이 되어 `sign` 필터링을 우회하여 `cat flag`를 서명할 수 있습니다.
 위를 바탕으로 `exploit`을 짜면 아래와 같습니다.
@@ -341,13 +341,13 @@ conn.interactive()
 문제명도 `Blind`인 것을 보니... 제가 한 공격이 아니라 이 공격이 원래 의도한 문제풀이였나봅니다. `Blind RSA attack`도 간단해서 한번 정리해봅니다.
 
 * 먼저 임의의 수 r을 선택합니다. (이때 r은 n과 서로수),
-1. gcd(r, n)==1)
+ 1. gcd(r, n)==1)
 * 메세지(m)을 서명한 r과 곱합니다. 그리고 r은 r^-1를 구합니다.
-2. m' ≡ m*r^e (mod n),  r^{-1} (mod n)
+ 2. m' ≡ m*r^e (mod n),  r^{-1} (mod n)
 * m'를 서명합니다.
-3. s' ≡ (m')^d (mod n)
+ 3. s' ≡ (m')^d (mod n)
 * s'에 r^-1를 곱하게 되면 m^d mode N을 구할 수 있습니다.
-4. s ≡ s'r' ≡ m^d (mod n)
+ 4. s ≡ s'r' ≡ m^d (mod n)
 
 관련 사이트 :
 위키피디 https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures
