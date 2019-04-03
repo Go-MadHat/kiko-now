@@ -1,6 +1,7 @@
 ---
 layout: post
-title: [VolgaCTF 2019] Blind
+title: "[VolgaCTF 2019] Blind"
+comments: true
 excerpt_separator: <!--more-->
 tags:
   - Write-up
@@ -408,4 +409,4 @@ conn.sendline(str(s) + ' cat flag')
 conn.interactive()
 ```
 
-![]({{ site.baseurl }}/images/myria/Blind-writeup/Blind_03.PNG) 
+![]({{ site.baseurl }}/images/myria/Blind-writeup/Blind_03.PNG)
