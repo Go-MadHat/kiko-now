@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[BSidesSF 2019] mixxer"
+comments: true
 excerpt_separator: <!--more-->
 tags:
   - Write-up
