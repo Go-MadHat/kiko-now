@@ -1,18 +1,17 @@
 ---
 layout: post
 title: ! "[VolgaCTF 2019 Qualifier] JOI"
-categories: [CTF]
-excerpt: " "
-comments: true
-share: true
+excerpt_separator: <!--more-->
+comment: true
 tags:
-  - stego
+  - MitNy
   - CTF
-  - write-up
+  - Write-up
 ---
 
 2019 Volga CTF 예선 150 포인트짜리 문제이다.
 
+<!--more-->
 ![]({{ site.baseurl }}/images/mitny/Volga2019/result.png)
 
 QR 코드 이미지가 있고 인식을 해보면
