@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [PlaidCTF] can you guess me
+title: ""[PlaidCTF] can you guess me"
 comments: true
 excerpt_separator: <!--more-->
 tags:
@@ -10,7 +10,8 @@ tags:
   - MyriaBreak
 ---
 
-##can you guess me (100 pts)
+#can you guess me (100 pts)
+
 ```
 Here's the source to a guessing game: here
 You can access the server at
@@ -20,6 +21,7 @@ nc canyouguessme.pwni.ng 12349
 문제자체는 간단한 `Python Sandbox Escape`문제이다. 문제를 소스를 살펴보면 아래와 같다.
 
 <!--more-->
+
 ```python
 from sys import exit
 from secret import secret_value_for_password, flag, exec
@@ -137,7 +139,8 @@ NameError: name 'ls' is not defined
 글자종류가 `11`이기 때문에 글자종류를 1개 줄일 필요가 있습니다. `eval`대신 `exec`를 사용하면 문제가 해결되지만, 위에서 봤다시피 `exec`는 사용할 수 없습니다. 그러면 `eval`을 사용하되 존재하는 문자종류를 줄일 필요가 있습니다.
 
 여기서 우리는 `eval`을 보고 `val`라는 변수가 있었다는 것을 떠올릴 수 있습니다.
-```Python
+
+```python
 try:
     val = 0
     inp = input("Input value: ")
