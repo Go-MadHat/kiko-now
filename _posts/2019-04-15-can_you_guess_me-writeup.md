@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""[PlaidCTF] can you guess me"
+title: "[PlaidCTF] can you guess me"
 comments: true
 excerpt_separator: <!--more-->
 tags:
@@ -9,8 +9,6 @@ tags:
   - python sandbox
   - MyriaBreak
 ---
-
-#can you guess me (100 pts)
 
 ```
 Here's the source to a guessing game: here
