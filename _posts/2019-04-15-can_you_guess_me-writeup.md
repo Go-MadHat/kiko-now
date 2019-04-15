@@ -110,28 +110,28 @@ Nope. No hacking.
 현재 사용된 문자종류갯수 : 7
 
 ```Python
->>> chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)
+　>>> chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)
 '#'
->>> chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)+chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)+chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)
+　>>> chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)+chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)+chr(1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1)
 '###'
 >>> len(set("chr(1+1+1)"))
 7
->>>
+　>>>
 ```
 
 이제 `print(flag)` 문자열을 만들어 `eval()`함수로 감싸주면 `flag`가 출력될 것입니다. 그러나 여기서 `eval()`을 사용하면 글자종류가 초과됩니다.
 
 ```Python
->>> inp = "eval(chr(11+11+11+11+11+11+11+11+11+1+1+1+1+1+1+1+1+1)+chr(111+1+1+1+1))"
->>> eval(inp)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<string>", line 1, in <module>
-  File "<string>", line 1, in <module>
-NameError: name 'ls' is not defined
->>> len(set(inp))
-11
->>>
+　>>> inp = 　"eval(chr(11+11+11+11+11+11+11+11+11+1+1+1+1+1+1+1+1+1)+chr(111+1+1+1+1))"
+　>>> eval(inp)
+　Traceback (most recent call last):
+　  File "<stdin>", line 1, in <module>
+　  File "<string>", line 1, in <module>
+　  File "<string>", line 1, in <module>
+　　NameError: name 'ls' is not defined
+　>>> len(set(inp))
+　11
+　>>>
 ```
 
 글자종류가 `11`이기 때문에 글자종류를 1개 줄일 필요가 있습니다. `eval`대신 `exec`를 사용하면 문제가 해결되지만, 위에서 봤다시피 `exec`는 사용할 수 없습니다. 그러면 `eval`을 사용하되 존재하는 문자종류를 줄일 필요가 있습니다.
@@ -152,20 +152,20 @@ try:
 여기서 `val`의 값은 0입니다. 그러나 `all`함수를 사용하면 `True`라는 값을 만들어낼 수 있습니다. `True`는 `1`로 사용할 수 있습니다.
 
 ```Python
->>> all(chr(val))
-True
->>> inp = "eval(chr(all(chr(val)))+chr(all(chr(val))))"
->>> eval(inp)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<string>", line 1, in <module>
-  File "<string>", line 1
-
-    ^
-SyntaxError: invalid syntax
->>> len(set(inp))
-10
->>>
+　>>> all(chr(val))
+　True
+　>>> inp = "eval(chr(all(chr(val)))+chr(all(chr(val))))"
+　>>> eval(inp)
+　Traceback (most recent call last):
+　  File "<stdin>", line 1, in <module>
+　  File "<string>", line 1, in <module>
+　  File "<string>", line 1
+　
+　    ^
+　SyntaxError: invalid syntax
+　>>> len(set(inp))
+　10
+　>>>
 ```
 
 멋집니다!! 쓸 수 있는 문자종류가 딱 `10`이 되었습니다. 이제 다음 커맨드를 실행할 수 있습니다. `print(flag)`
