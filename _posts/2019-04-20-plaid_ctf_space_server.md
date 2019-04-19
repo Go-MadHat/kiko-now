@@ -31,16 +31,16 @@ root@ubuntu:/home/ubuntu/study/ctf# strings space_saver-90a5a93dfdda2d0333f573eb
 위에서 수행한 txt파일을 열어서 의심스러운 문구들을 조합하여 flag를 획득할 수 있다.  
 IEND를 검색해보면 다음과 같은 결과들을 모아볼 수 있기 떄문이다.  
 
-space_saver_01.PNG
-space_saver_02.PNG
-space_saver_03.PNG
+![](/images/chaem/pctf/space_saver_01.PNG)  
+![](/images/chaem/pctf/space_saver_02.PNG)  
+![](/images/chaem/pctf/space_saver_03.PNG)  
 
 따라서 IEND뒤의 문자열들을 이어붙이면 flag가 된다!!!  
 
 위와 같은 방법 외에도 binwalk를 이용한 방법을 보았었다.  
-space_saver_04.PNG  
+![](/images/chaem/pctf/space_saver_04.PNG)  
 binwalk를 이용하여 다음과 같은 6개의 파일을 얻을 수 있는 것을 확인하였다.  
 하지만 나는 막상 6개의 파일에서 flag에 대한 정보를 얻을 수 없었다.  
-space_saver_05.PNG  
+![](/images/chaem/pctf/space_saver_05.PNG)  
 파일이 깨져서 보이는 것 같기도 하고 ㅠㅠ  
 아무튼 그래서 첫번째 방법으로 문제를 해결하게 되었다.  
