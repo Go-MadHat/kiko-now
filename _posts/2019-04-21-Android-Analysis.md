@@ -5,6 +5,7 @@ excerpt_separator: <!--more-->
 comments: true
 tags:
   - Android
+  - mingzzi
 ---
 
 `apktool`을 이용하여 안드로이드 어플리케이션을 리패키징 할 수 있다는 사실을 알았다.  
