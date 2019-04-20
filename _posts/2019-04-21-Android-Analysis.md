@@ -42,7 +42,7 @@ tags:
 
 ## APK 다운  
 
-![](/images/mingzzi/android/repack/repack_01.png)  
+![](/images/mingzzi/android/repack_01.png)  
 
 그럼 이제 분석 할 `APK`와 이를 분석 할 `jd-gui`를 다운받아야 한다.  
 
@@ -52,7 +52,7 @@ tags:
 
 해당 링크에서 오른쪽의 검색 창에 다운받을 어플리케이션의 이름을 입력하면 `APK` 파일을 다운받을 수 있다.  
 
-![](/images/mingzzi/android/repack/repack_02.png)  
+![](/images/mingzzi/android/repack_02.png)  
 
 ## 어플리케이션 분석 툴 다운  
 
@@ -64,11 +64,11 @@ tags:
 
 아래와 같이 해당 링크를 클릭하면 최신 버전의 `jadx`를 다운받을 수 있다.  
 
-![](/images/mingzzi/android/repack/repack_03.png)  
+![](/images/mingzzi/android/repack_03.png)  
 
 링크 클릭 시 3개의 파일이 있을텐데 이 중 `zip` 파일을 다운받으면 된다.  
 
-![](/images/mingzzi/android/repack/repack_04.png)  
+![](/images/mingzzi/android/repack_04.png)  
 
 압축을 해제하고 이 중 `jadx-gui.bat`을 실행시키면 된다.  
 
@@ -76,7 +76,7 @@ tags:
 
 실행 후 분석할 `APK` 파일을 열면 `JAVA` 코드로 디컴파일 된 것을 확인할 수 있다.  
 
-![](/images/mingzzi/android/repack/repack_05.png)  
+![](/images/mingzzi/android/repack_05.png)  
 
 ## 어플리케이션 리패키징 하기  
 
@@ -90,11 +90,11 @@ tags:
 apktool d [APK 파일 경로]
 ```
 
-![](/images/mingzzi/android/repack/repack_06.png)  
+![](/images/mingzzi/android/repack_06.png)  
 
 그럼 명령어를 실행 한 디렉토리에 디컴파일 된 `APK` 파일을 확인할 수 있다.  
 
-![](/images/mingzzi/android/repack/repack_07.png)  
+![](/images/mingzzi/android/repack_07.png)  
 
 나의 경우에는 `cmd`를 실행 한 경로가 `C:\Users\USERNAME` 이었기에 디컴파일 된 폴더도 같은 곳에 생성되었다.  
 
@@ -108,11 +108,11 @@ apktool d [APK 파일 경로]
 apktool b [디렉토리 명]
 ```
 
-![](/images/mingzzi/android/repack/repack_08.png)  
+![](/images/mingzzi/android/repack_08.png)  
 
 그럼 아래와 같이 `dist` 디렉토리가 생성되며, 그 안에 `apk` 파일이 생성 된 것을 확인할 수 있다.  
 
-![](/images/mingzzi/android/repack/repack_19.png)  
+![](/images/mingzzi/android/repack_09.png)  
 
 ## APK 서명하기
 
@@ -126,10 +126,10 @@ apktool b [디렉토리 명]
 java -jar signapk.jar testkey.x509.pem testkey.pk8 [서명할 APK 이름] [서명 후의 APK 명]
 ```
 
-![](/images/mingzzi/android/repack/repack_10.png)  
+![](/images/mingzzi/android/repack_10.png)  
 
 위의 명령어를 실행 한 결과 아래와 같이 `apk`가 새로 생성 된 것을 확인할 수 있다.  
 
-![](/images/mingzzi/android/repack/repack_11.png)  
+![](/images/mingzzi/android/repack_11.png)  
 
 이제 이 `apk` 파일을 실행시키면 정상적으로 동작 할 것이다.  
