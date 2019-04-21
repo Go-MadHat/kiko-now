@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! "[plaid ctf] space server write up"
+title: ! "[plaid ctf] space saver write up"
 excerpt_separator: <!--more-->
 comments : true
 tags:
@@ -10,7 +10,7 @@ tags:
   - chaem
 ---
 
-오늘은 plaid ctf의 misc분야로 출제되었던 space server 문제에 대한 writeup을 써보도록 하겠다.  
+오늘은 plaid ctf의 misc분야로 출제되었던 space saver 문제에 대한 writeup을 써보도록 하겠다.  
 
 <!--more-->
 
