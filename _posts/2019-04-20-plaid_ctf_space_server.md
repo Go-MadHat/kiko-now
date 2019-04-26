@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! "[plaid ctf] space saver write up (수정 예정)"
+title: ! "[Plaid ctf] space saver write up (수정 예정)"
 excerpt_separator: <!--more-->
 comments : true
 tags:
