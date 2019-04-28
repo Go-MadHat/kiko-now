@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [volgaCTF 2019] warm
+title: ! "[volgaCTF 2019] warm"
 excerpt_separator: <!--more-->
 tags:
   - Vertex
