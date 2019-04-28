@@ -8,9 +8,11 @@ tags:
   - Write-up
 ---
 
+대회 이후에 푼 volgaCTF 2019 warm 포너블 문제.
+<!--more-->
 
 
-# VolgaCTF2019 - warm
+## VolgaCTF2019 - warm
 
 arm 바이너리로 되어있는 간단한 포너블 문제이다.
 
