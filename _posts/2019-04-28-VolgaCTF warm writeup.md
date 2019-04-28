@@ -10,9 +10,9 @@ tags:
 
 
 
-## VolgaCTF2019 - warm
+# VolgaCTF2019 - warm
 
-arm 바이너리로 되어있는 포너블 문제이다.
+arm 바이너리로 되어있는 간단한 포너블 문제이다.
 
 
 
