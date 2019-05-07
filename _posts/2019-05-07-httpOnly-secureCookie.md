@@ -36,6 +36,7 @@ tags:
 
 - Java 6 이상, Servlet 3.0 지원되는 경우
 - Java 코드 내에서
+
 ```java
 Cookie cookie = getMyCookie("myCookieName");
 cookie.setHttpOnly(true);
@@ -52,7 +53,7 @@ cookie.setHttpOnly(true);
 ```
 
 - PHP 5.2.0 이상
-<br>
+
 ```php
 // /etc/php/{version}/php.ini 파일 수정
 session.cookie_httponly = True
@@ -77,6 +78,7 @@ session.cookie_httponly = True
 ```
 
 - PHP
+
 ```php
 // /etc/php/{version}/php.ini 파일 수정
 session.cookie_secure = True
