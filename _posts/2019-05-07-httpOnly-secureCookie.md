@@ -54,7 +54,7 @@ cookie.setHttpOnly(true);
 - PHP 5.2.0 이상
 <br>
 ```php
-* /etc/php/{version}/php.ini 파일 수정
+// /etc/php/{version}/php.ini 파일 수정
 session.cookie_httponly = True
 ```
 또는 session_start(); 전에 `ini_set( 'session.cookie_httponly', 1 );
@@ -78,7 +78,7 @@ session.cookie_httponly = True
 
 - PHP
 ```php
-* /etc/php/{version}/php.ini 파일 수정
+// /etc/php/{version}/php.ini 파일 수정
 session.cookie_secure = True
 ```
 또는 session_start(); 전에 `ini_set( 'session.cookie_secure', 1 );`
