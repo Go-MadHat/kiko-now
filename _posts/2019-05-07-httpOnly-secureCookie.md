@@ -23,6 +23,7 @@ tags:
 - 서버로 HTTP Request 요청을 보낼때만 쿠키를 전송한다.
 - 이를 통해 XSS(Cross Site Scripting) 공격을 차단할 수 있다.
 
+<br>
 1. HTTP Only 설정 방법
 
 - Tomcat 6 이상
@@ -51,6 +52,7 @@ cookie.setHttpOnly(true);
 ```
 
 - PHP 5.2.0 이상
+<br>
 ```php
 * /etc/php/{version}/php.ini 파일 수정
 session.cookie_httponly = True
