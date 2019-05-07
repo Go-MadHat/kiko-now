@@ -10,7 +10,7 @@ tags:
 ---
 
 쿠키의 HTTP Only 옵션과 Secure 옵션에 대해 알아보는 글입니다.
-<!-- more -->
+<!--more-->
 
 ### HTTP Only
 
