@@ -88,7 +88,7 @@ PHP에서 설정하는 방법으로 위의 옵션들을 직접 적용해 볼 것
 
 ![]({{ site.baseurl }}/images/mitny/cookie/secure_cookie_comment.png)
 기본 옵션에서는 secure 옵션이 주석 처리 되어있다.
-![]({{ site.baseurl }}/images/mitny/cookie/secure_cookie_comment.png)
+![]({{ site.baseurl }}/images/mitny/cookie/httponly_cookie.png)
 
 위와 같이 `session.cookie_secure = True`,`session.cookie_httponly = True`로 설정해준 후
 apache 서버를 재시작해준다.
