@@ -52,4 +52,4 @@ apk추출은 많은 방법이 있는데, [플레이스토어](https://play.googl
 
 ![]({{ site.baseurl }}/images/nalda/android/04.png)
 
-쓰는중~~~
+2부 계속
