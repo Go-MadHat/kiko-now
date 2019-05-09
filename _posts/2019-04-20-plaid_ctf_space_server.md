@@ -45,4 +45,4 @@ IEND를 검색해보면 다음과 같은 결과들을 모아볼 수 있기 떄�
 따라서 IEND뒤의 문자열들을 이어붙이면 password가 된다!!!  
 password를 치면 flag가 적힌 이미지파일을 획득할 수 있다!  
 
-![](/images/chaem/pctf/final.PNG)  
+![](/images/chaem/pctf/final.png)  
