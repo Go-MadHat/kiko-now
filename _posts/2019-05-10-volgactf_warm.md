@@ -6,7 +6,7 @@ comments : true
 tags:
   - volga
   - warm
-  - pwn
+  - pwnable
   - chaem
 ---
 
