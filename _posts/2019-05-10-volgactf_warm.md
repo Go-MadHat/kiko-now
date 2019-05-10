@@ -4,8 +4,7 @@ title: ! "[Volga ctf] warm write up"
 excerpt_separator: <!--more-->
 comments : true
 tags:
-  - volga
-  - warm
+  - VolgaCTF2019
   - pwnable
   - chaem
 ---
