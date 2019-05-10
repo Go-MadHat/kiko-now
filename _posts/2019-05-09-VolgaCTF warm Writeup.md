@@ -101,6 +101,7 @@ int sub_9EC()
 3. 입력받은 password는 `sub_788`함수에서 루틴을 체크한다.
 4. 이를 통과하면, `v4`에 들어있는(2에서 반환된 값) file을 실행한다.
 생각보다 간단한 프로그램이다 바로 `sub_788`의 내용을 확인해보자
+
 ```c
 signed int __fastcall sub_788(const char *a1)
 {
@@ -135,7 +136,8 @@ signed int __fastcall sub_788(const char *a1)
 생각보다 간단한 루틴체크이다.
 각 조건별로 `(s[i] ^ s[i-1])`의 값과 !=로 뒤의값과 비교한다.
 이 조건을 통해 python 코드를 작성했다.
-```c
+
+```python
 key = [ 85, 78, 30, 21, 94, 28, 33, 1, 52, 7, 53, 17, 55, 60, 114, 71 ]
 
 passChar = 35
@@ -146,7 +148,7 @@ for i in key:
     passChar = i ^ passChar
     passwd += chr(passChar)
 
-print(passwd)
+print passwd
 ```
 
 
