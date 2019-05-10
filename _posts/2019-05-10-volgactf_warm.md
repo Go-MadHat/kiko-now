@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! "[Volga ctf] warm write up"
+title: ! "[VolgaCTF] warm write up"
 excerpt_separator: <!--more-->
 comments : true
 tags:
