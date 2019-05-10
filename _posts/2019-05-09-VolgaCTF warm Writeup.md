@@ -155,6 +155,7 @@ print passwd
 ![]({{ site.baseurl }}/images/nalda/warm/1.png)
 
 결과이다!
+
 ```
 v8&3mqPQebWFqM?x
 ```
