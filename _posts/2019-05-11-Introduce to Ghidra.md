@@ -8,7 +8,9 @@ tags:
   - Vertex
 ---
 
+오늘은 Ghidra에 대해 소개 해 드리겠습니다.
 
+<!--more-->
 
 # Ghidra 소개
 
