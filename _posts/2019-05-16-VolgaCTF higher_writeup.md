@@ -1,8 +1,8 @@
 ﻿---
 layout: post
-title: [VolgaCTF 2019] higher Write-up
-excerpt_separator: <!--more-->
+title: "[VolgaCTF 2019] higher Write-up"
 comments : true
+excerpt_separator: <!--more-->
 tags :
   - sang-gamja
   - volga ctf
@@ -17,6 +17,7 @@ volga ctf higher write-up 입니다.
 
 
 우선 문제에서 주어진 mp3파일을 Audacity로 열어보았습니다.
+![Alt text](/images/gamja/higher/higher1.jpg)
 ![]({{ site.baseurl }}/images/gamja/higher/higher1.jpg)
 
 그리고 좀더 우리가 노가다 하기 편하게 바꾸어 주기 위해서 좌측에 recorded를 클릭하여 스팩트로그램으로 바꾸어 줍니다.
