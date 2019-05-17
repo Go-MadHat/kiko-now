@@ -16,7 +16,7 @@ volga ctf higher write-up 입니다.
 문제는 단순한 mp3 파일에서의 데이터를 flag로 변환하는 문제였습니다.
 
 우선 문제에서 주어진 mp3파일을 Audacity로 열어보았습니다.
-![]({{ site.baseurl }}/images/gamja/higher/higher1.jpg)
+![]({{ site.baseurl }}/images/gamja/higher/higher1.JPG)
 
 그리고 좀더 우리가 노가다 하기 편하게 바꾸어 주기 위해서 좌측에 recorded를 클릭하여 스팩트로그램으로 바꾸어 줍니다.
 
@@ -30,4 +30,4 @@ volga ctf higher write-up 입니다.
 이 비트를 텍스트로 변경하면 플래그가 나옵니다.
 변경은 https://codebeautify.org/binary-string-converter 에서 하였습니다.
 
-![]({{ site.baseurl }}/images/gamja/higher/higher3.jpg)
+![]({{ site.baseurl }}/images/gamja/higher/higher3.JPG)
