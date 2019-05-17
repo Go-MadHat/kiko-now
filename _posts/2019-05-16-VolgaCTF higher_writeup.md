@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: File Inclusion Attacks
+title: VolgaCTF higher_writeup
 excerpt_separator: <!--more-->
 comments : true
 tags :
