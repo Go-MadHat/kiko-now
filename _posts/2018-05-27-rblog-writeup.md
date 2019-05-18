@@ -7,7 +7,7 @@ tags:
   - Write-up
   - CTF
   - RCTF2018
-  - ccoma
+  - mingzzi
 ---
 
 `rblog`는 `RCTF 2018`에 출제되었던 XSS 문제인데, 대회 기간에는 풀이하지 못했다가 Write-up이 올라온 후 풀어보게 되었다.  
