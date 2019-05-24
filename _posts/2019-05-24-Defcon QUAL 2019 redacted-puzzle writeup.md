@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [DEFCON 2019 Quals] GIF Redacted-Puzzle
+title: ! "[DEFCON 2019 Quals] GIF Redacted-Puzzle"
 excerpt_separator: <!--more-->
 tags:
   - Vertex
