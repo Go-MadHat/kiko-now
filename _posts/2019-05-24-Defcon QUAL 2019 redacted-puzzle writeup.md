@@ -11,6 +11,9 @@ tags:
 
 
 # DefconQUAL 2019 - Redacted-puzzle
+풀이는 이미 올라왔으니 GIF Format에 대해 다뤘습니다
+<!--more-->
+
 
  처음에 시도한 방법
 
