@@ -1,3 +1,19 @@
+---
+layout: post
+title: "멜트다운과 스펙터(Meltdown and Spectre)"
+comments: true
+excerpt_separator: <!--more-->
+tags:
+  - Spectre
+  - Meltdown
+  - MyriaBreak
+---
+
+`Plaid CTF 2019`에 `Spectre`라는 666점짜리 pwn문제가 있었는데, `Spectre`를 자세히 몰라 건드려보지도 못했었다. 그러다 최근 `Meltdown`이랑 `Spectre`을 공부할 기회가 생겨서 공부한 내용을 정리하여 포스팅하게 되었다. 기회가 된다면 pctf에 나왔던 Spectre라는 문제도 한번 건드려볼 생각이다.
+
+<!--more-->
+
+
 # 멜트다운과 스펙터(Meltdown and Spectre)
 
 최신 CPU에서 사용하는 최적화 기법인 비순차적 실행(out-of-order execution)과 추측 실행(speculative execution)를 악용한 **`매우 심각한 보안 취약점`**
@@ -196,6 +212,12 @@ CVE-2017-5715('branch target injection' 분기표적 주입)
 ⇒ 그래도 현재 모든 CPU에서는 발생가능하다. 그러나 문제를 발견해 막기도 힘들다.
 
 스펙터가 분기예측이라는 방법론 자체의 문제이기 때문에  멜트다운과 같이 소프트웨어 업데이트로는 사실상 완전히 막을 수 없다.
+
+
+====================
+
+`iOS`보안 공부를 하면서 `iOS`에서도 `Meltdown`과 `Spectre`때문에 보안패치를 하였다는 것을 알게되었다. 이에 이 내용을 추가하여 정리해두었다.
+
 
 ## iOS에서의 멜트다운, 스펙터 대처
 
