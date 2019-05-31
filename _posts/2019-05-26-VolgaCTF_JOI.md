@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Volga_CTF_2019_JOI'
+title: ! '[VolgaCTF 2019]JOI'
 excerpt_separator: <!--more-->
 tags:
   - Koon
