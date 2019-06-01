@@ -71,9 +71,9 @@ MIPS 레지스터의 호출 규약은 일반적으로 사용되는 O32 ABI와 N6
 	- sudo apt-get install emdebian-archive-keyring  
 	- apt-get install linux-libc-dev-mips-cross libc6-mips-cross libc6-dev-mips-cross binutils-mips-linux-gnu gcc-4.4-mips-linux-gnu g++-4.4-mips-linux-gnu  
 
-3. mips-linux-gcc 가 설치되어있는지 쳌쳌쳌!!! 해봅시당  
-	- Sudo apt install gcc-mips-linux-gnu  
-  - mips-linux-gnu-gcc -dumpmachine  
+3. mips-linux-gcc 가 설치되어있는지 체크!!! 해봅시당  
+	- sudo apt install gcc-mips-linux-gnu  
+  	- mips-linux-gnu-gcc -dumpmachine  
 
 이러한 과정을 통해 MIPS Cross Compile을 할 수 있는 환경 완성!! 두둥!!!  
 환경을 무사히 구축하셨나용?! (완전 새 브엠이라면 부가적으로 설치할 게 좀 많을 수도...하하)  
@@ -98,7 +98,7 @@ MIPS 레지스터의 호출 규약은 일반적으로 사용되는 O32 ABI와 N6
 
 >![]({{ site.baseurl }}/images/chaem/mips/mips_04.png)  
 
-간단한 Hello World 코드를 짜고 컴파일해서 IDA로 열어보면,  
+간단한 Hello World 코드를 짜고 `mips-linux-gnu-gcc -o hello hello.c` 컴파일해서 IDA로 열어보면,  
 
 >![]({{ site.baseurl }}/images/chaem/mips/mips_05.png)  
 
