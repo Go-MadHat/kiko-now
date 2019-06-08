@@ -9,7 +9,7 @@ tags:
 
 USB 디바이스는 어딜가나 우리 주변에 있다.
 
-이런 USB 디바이스는 어떻게 작동하는걸까? 답은 “USB Descriptor” 이다.
+이런 USB 디바이스의 정체는 뭘까? 무엇이 USB의 존재를 정의하는가! 답은 “USB Descriptor” 이다.
 
 USB descriptor를 살펴보고자 한다.
 
