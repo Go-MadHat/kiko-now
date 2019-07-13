@@ -4,9 +4,7 @@ title: "[glibc] malloc - fastchunk size check 분석"
 comments: true
 excerpt_separator: <!--more-->
 tags:
-  - Write-up
-  - pwnable
-  - defcon27
+  - heap
   - MyriaBreak
 ---
 
