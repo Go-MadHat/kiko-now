@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ! "Debugging Functions를 이용해서 Function Call Tracer 만들기"
+comment: true
 excerpt_separator: <!--more-->
 tags:
   - Vertex
