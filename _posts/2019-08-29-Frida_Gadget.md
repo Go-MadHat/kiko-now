@@ -21,7 +21,6 @@ Android 상에서 Frida를 사용할 때는 Frida-server / Frida-Gadget을 이�
 * Frida-server : 루팅된 환경에서 사용하는 방식
 * Frida-Gadget : 루팅되지 않은 환경에서 사용하는 방식
 
-
 # Frida-Gadget
 ![]({{ site.baseurl }}/images/Koon/Gadget/Gadget_1.PNG)
 Frida-Gadget을 이용하는 방식에 대해서 설명을 하겠습니다.
@@ -35,11 +34,13 @@ Frida-Gadget과 연결이 이루어지면, 기존 제공되어지는 Api들을 �
 # How To USe
 ### 1. 환경 설정
 
-```pip install frida-tools
+```
+pip install frida-tools
 ```
 분석 환경에 프리다를 설치합니다.
 
-```frida --version
+```
+frida --version
 ```
 프리다 버전을 확인합니다.
 
@@ -47,7 +48,8 @@ Frida-Gadget과 연결이 이루어지면, 기존 제공되어지는 Api들을 �
 자신이 설치한 프리다 버전에 맞는 Gadget을 다운 받습니다.
 
 ### 2. 앱 디컴파일
-```apktool d [***.apk]
+```
+apktool d [***.apk]
 ```
 분석하고자 하는 앱의 apk를 구한 뒤 이를 Apktool을 통해 디컴파일합니다.
 
@@ -61,17 +63,21 @@ Frida-Gadget과 연결이 이루어지면, 기존 제공되어지는 Api들을 �
 ![]({{ site.baseurl }}/images/Koon/Gadget/Gadget_4.PNG)
 Manifest file 안에 "INTERNET" 관련 permission을 추가합니다.
 
-```System.loadLibrary("frida")
+```
+System.loadLibrary("frida")
 ```
 자신이 만든 앱에 사용하는 경우라면 이 코드를 java 파일안에 적습니다.
 
-```const-string v1, "frida"
-   invoke-static {v1}, Ljava/lang/system;->loadLibrary(Ljava/lang/String;)V
+```
+const-string v1, "frida"
+invoke-static {v1}, Ljava/lang/system;->loadLibrary(Ljava/lang/String;)V
 ```
 자신이 만든 앱이 아닌 경우라면, 스마일리(.smail)파일안에 이 바이트 코드를 집어넣으면 됩니다.
 
 ### 4. 리패키징
-```apktool b -o [out] [decompiled folder]
+
+```
+apktool b -o [out] [decompiled folder]
 ```
 수정 했던 폴더 내용들을 이제 하나로 합쳐 apk로 만드시면 됩니다.
 
